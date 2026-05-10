@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<!-- Commento generale file: struttura principale della pagina. -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno di Dante</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/selva_oscura.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/png" href="assets/img/oggetti/favicon.png">
+    <script src="js/gameCore.js" defer></script>
+    <script src="js/lingua.js" defer></script>
+    <script src="js/musicManager.js" defer></script>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="stage-title" data-i18n="selva_stage_title">SELVA OSCURA</div>
+
+    <!-- Dialogo di scelta del dannato iniziale. -->
+    <div id="dialog-overlay" class="nascosto">
+        <div class="dialog-box">
+            <div class="dialog-header">
+                <p class="dialog-virgilio-nome">- Virgilio -</p>
+                <h2 class="dialog-titolo" data-i18n="selva_dialog_title">Scegli il tuo compagno di battaglia</h2>
+                <p class="dialog-sottotitolo" data-i18n-html="selva_dialog_subtitle">
+                    "Prima di scendere nell'Inferno, devi scegliere<br>
+                    quale bestia combattera al tuo fianco."
+                </p>
+            </div>
+
+            <div class="dialog-cards">
+                <div class="dannato-card" id="card-leone" onclick="selezionaDannato('leone')">
+                    <div class="card-img-box">
+                        <img src="assets/img/bestie/leone_idle_frames/frame_000.png" alt="Leone">
+                    </div>
+                    <h3 class="card-nome" data-i18n="selva_leone_nome">Leone</h3>
+                    <div class="card-stats">
+                        <span class="stat hp">HP --</span>
+                        <span class="stat atk">ATK --</span>
+                    </div>
+                    <p class="card-skill" data-i18n="selva_leone_skill">SKL Ruggito Terrificante</p>
+                    <p class="card-desc" data-i18n-html="selva_leone_desc">Simbolo della violenza.<br>Forte e inarrestabile.</p>
+                </div>
+
+                <div class="dannato-card" id="card-lonza" onclick="selezionaDannato('lonza')">
+                    <div class="card-img-box">
+                        <img src="assets/img/bestie/lonza_idle_frames/frame_000.png" alt="Lonza">
+                    </div>
+                    <h3 class="card-nome" data-i18n="selva_lonza_nome">Lonza</h3>
+                    <div class="card-stats">
+                        <span class="stat hp">HP --</span>
+                        <span class="stat atk">ATK --</span>
+                    </div>
+                    <p class="card-skill" data-i18n="selva_lonza_skill">SKL Salto Agile</p>
+                    <p class="card-desc" data-i18n-html="selva_lonza_desc">Simbolo della lussuria.<br>Veloce e ingannevole.</p>
+                </div>
+
+                <div class="dannato-card" id="card-lupa" onclick="selezionaDannato('lupa')">
+                    <div class="card-img-box">
+                        <img src="assets/img/bestie/lupa_idle_frames/frame_000.png" alt="Lupa">
+                    </div>
+                    <h3 class="card-nome" data-i18n="selva_lupa_nome">Lupa</h3>
+                    <div class="card-stats">
+                        <span class="stat hp">HP --</span>
+                        <span class="stat atk">ATK --</span>
+                    </div>
+                    <p class="card-skill" data-i18n="selva_lupa_skill">SKL Morso Avvelenato</p>
+                    <p class="card-desc" data-i18n-html="selva_lupa_desc">Simbolo dell'avarizia.<br>Famelica e spietata.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/selva_oscura.js"></script>
+</body>
+</html>
+
+
+
+
+
+

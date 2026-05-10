@@ -1,0 +1,62 @@
+﻿{
+    "shield":  {
+                   "it":  "Riduce il danno subito dal prossimo colpo.",
+                   "en":  "Reduces incoming damage from the next hit."
+               },
+    "charm":  {
+                  "it":  "Il bersaglio salta il prossimo turno.",
+                  "en":  "Target skips the next turn."
+              },
+    "bleed":  {
+                  "it":  "Infligge danno periodico a inizio turno.",
+                  "en":  "Deals periodic damage at turn start."
+              },
+    "freeze":  {
+                   "it":  "Blocca il turno successivo.",
+                   "en":  "Blocks the next turn."
+               },
+    "burn":  {
+                 "it":  "Applica bruciatura con danno nel tempo.",
+                 "en":  "Applies burning damage over time."
+             },
+    "weaken":  {
+                   "it":  "Riduce il danno inflitto dal bersaglio.",
+                   "en":  "Reduces target outgoing damage."
+               },
+    "reflect_shield":  {
+                           "it":  "Attiva scudo e riflette parte del danno ricevuto.",
+                           "en":  "Grants shield and reflects part of taken damage."
+                       },
+    "true_damage":  {
+                        "it":  "Il prossimo colpo ignora lo scudo.",
+                        "en":  "Next strike ignores shield."
+                    },
+    "plague_mark":  {
+                        "it":  "Accumula marchi; al limite esplodono in danno bonus.",
+                        "en":  "Stacks marks; at limit they burst for bonus damage."
+                    },
+    "energy_drain":  {
+                         "it":  "Ruba energia speciale al bersaglio.",
+                         "en":  "Drains special energy from target."
+                     },
+    "lifesteal":  {
+                      "it":  "Recupera HP in base al danno inflitto.",
+                      "en":  "Heals based on dealt damage."
+                  },
+    "sacrifice_buff":  {
+                           "it":  "Consuma HP per potenziare il prossimo colpo.",
+                           "en":  "Consumes HP to boost the next strike."
+                       },
+    "chaos":  {
+                  "it":  "Rimuove i buff difensivi dell\u0027avversario.",
+                  "en":  "Removes enemy defensive buffs."
+              },
+    "boss_combo":  {
+                       "it":  "Combina controllo e danno periodico.",
+                       "en":  "Combines control and periodic damage."
+                   },
+    "dodge":  {
+                  "it":  "Permette di evitare il prossimo colpo subito.",
+                  "en":  "Allows the unit to avoid the next incoming hit."
+              }
+}

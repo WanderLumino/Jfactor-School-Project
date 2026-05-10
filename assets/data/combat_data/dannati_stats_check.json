@@ -1,0 +1,184 @@
+[
+    {
+        "specie": "limbo",
+        "nome_it": "Achille",
+        "nome_en": "Achilles",
+        "hp": 118,
+        "atk": 14,
+        "sp_atk": 18,
+        "special_type": "weaken",
+        "passives": [
+            "regen_every_turn"
+        ],
+        "bestiario_atk": 14,
+        "bestiario_sp": 18
+    },
+    {
+        "specie": "lussurioso",
+        "nome_it": "Paolo e Francesca",
+        "nome_en": "Paolo and Francesca",
+        "hp": 122,
+        "atk": 15,
+        "sp_atk": 20,
+        "special_type": "charm",
+        "passives": [
+            "combo_scaling"
+        ],
+        "bestiario_atk": 15,
+        "bestiario_sp": 20
+    },
+    {
+        "specie": "goloso",
+        "nome_it": "Ciacco",
+        "nome_en": "Ciacco",
+        "hp": 128,
+        "atk": 15,
+        "sp_atk": 20,
+        "special_type": "lifesteal",
+        "passives": [
+            "execution_bonus_low_enemy"
+        ],
+        "bestiario_atk": 15,
+        "bestiario_sp": 20
+    },
+    {
+        "specie": "avaro",
+        "nome_it": "Ecclesiastici anonimi",
+        "nome_en": "Anonymous Clerics",
+        "hp": 140,
+        "atk": 17,
+        "sp_atk": 19,
+        "special_type": "shield",
+        "passives": [
+            "shield_damage_scaling"
+        ],
+        "bestiario_atk": 17,
+        "bestiario_sp": 19
+    },
+    {
+        "specie": "prodigo",
+        "nome_it": "Gli Sperperatori Eterni",
+        "nome_en": "The Eternal Wasters",
+        "hp": 136,
+        "atk": 17,
+        "sp_atk": 20,
+        "special_type": "plague_mark",
+        "passives": [
+            "plague_on_hit"
+        ],
+        "bestiario_atk": 17,
+        "bestiario_sp": 20
+    },
+    {
+        "specie": "iracondo",
+        "nome_it": "Filippo Argenti",
+        "nome_en": "Filippo Argenti",
+        "hp": 132,
+        "atk": 18,
+        "sp_atk": 21,
+        "special_type": "bleed",
+        "passives": [
+            "hp_loss_rage"
+        ],
+        "bestiario_atk": 18,
+        "bestiario_sp": 21
+    },
+    {
+        "specie": "accidioso",
+        "nome_it": "I Sommersi dello Stige",
+        "nome_en": "The Submerged of Styx",
+        "hp": 134,
+        "atk": 19,
+        "sp_atk": 20,
+        "special_type": "dodge",
+        "passives": [
+            "heal_on_enemy_special"
+        ],
+        "bestiario_atk": 19,
+        "bestiario_sp": 20
+    },
+    {
+        "specie": "eretico",
+        "nome_it": "Farinata degli Uberti",
+        "nome_en": "Farinata degli Uberti",
+        "hp": 136,
+        "atk": 24,
+        "sp_atk": 21,
+        "special_type": "burn",
+        "passives": [
+            "regen_if_enemy_burn"
+        ],
+        "bestiario_atk": 24,
+        "bestiario_sp": 21
+    },
+    {
+        "specie": "violenza_altri",
+        "nome_it": "Attila",
+        "nome_en": "Attila",
+        "hp": 146,
+        "atk": 20,
+        "sp_atk": 22,
+        "special_type": "true_damage",
+        "passives": [
+            "energy_on_damage_taken"
+        ],
+        "bestiario_atk": 20,
+        "bestiario_sp": 22
+    },
+    {
+        "specie": "violenza_se",
+        "nome_it": "Pier della Vigna",
+        "nome_en": "Pier della Vigna",
+        "hp": 142,
+        "atk": 21,
+        "sp_atk": 21,
+        "special_type": "reflect_shield",
+        "passives": [
+            "shield_each_turn"
+        ],
+        "bestiario_atk": 21,
+        "bestiario_sp": 21
+    },
+    {
+        "specie": "violenza_dio",
+        "nome_it": "Brunetto Latini",
+        "nome_en": "Brunetto Latini",
+        "hp": 144,
+        "atk": 21,
+        "sp_atk": 23,
+        "special_type": "invincible",
+        "passives": [
+            "cleanse_if_low_hp"
+        ],
+        "bestiario_atk": 21,
+        "bestiario_sp": 23
+    },
+    {
+        "specie": "fraudolento",
+        "nome_it": "I Millevolti",
+        "nome_en": "The Thousand-Faced",
+        "hp": 134,
+        "atk": 22,
+        "sp_atk": 23,
+        "special_type": "chaos",
+        "passives": [
+            "debuff_immunity_once"
+        ],
+        "bestiario_atk": 22,
+        "bestiario_sp": 23
+    },
+    {
+        "specie": "traditore",
+        "nome_it": "Lucifero",
+        "nome_en": "Lucifer",
+        "hp": 220,
+        "atk": 19,
+        "sp_atk": 26,
+        "special_type": "boss_combo",
+        "passives": [
+            "heal_once_low_hp"
+        ],
+        "bestiario_atk": 19,
+        "bestiario_sp": 26
+    }
+]

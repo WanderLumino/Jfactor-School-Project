@@ -1,0 +1,288 @@
+﻿/* Commento generale file: stili condivisi del popup bestiario. */
+.bestiario-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 42%),
+        radial-gradient(circle at 78% 82%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 36%),
+        rgba(0, 0, 0, 0.74);
+    backdrop-filter: blur(4px);
+    padding: 16px;
+}
+
+.bestiario-modal.hidden {
+    display: none;
+}
+
+.bestiario-card {
+    width: min(96vw, 860px);
+    max-height: 92vh;
+    overflow: auto;
+    border: 2px solid #8f7554;
+    border-radius: 14px;
+    background: rgba(214, 191, 158, 0.97);
+    padding: 18px;
+    color: #1f1710;
+}
+
+.bestiario-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bestiario-head h2 {
+    margin: 0;
+    font-size: clamp(20px, 2.2vw, 30px);
+    color: #2a2017;
+}
+
+.bestiario-index {
+    font-size: clamp(14px, 1.3vw, 18px);
+    opacity: 0.95;
+}
+
+.bestiario-body {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: minmax(130px, 220px) 1fr;
+    gap: 14px;
+}
+
+.bestiario-image-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #aeb4bc;
+    border-radius: 10px;
+    min-height: 180px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.bestiario-image-wrap img {
+    width: min(26vw, 200px);
+    height: min(26vw, 200px);
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.bestiario-info p {
+    margin: 0 0 8px;
+    line-height: 1.4;
+    color: #2f2419;
+}
+
+.bestiario-controls {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.bestiario-controls button,
+.bestiario-close {
+    border: 1px solid #949ba5;
+    background: #ffffff;
+    color: #1f252c;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.bestiario-controls button {
+    min-width: 90px;
+    padding: 8px 12px;
+    font-size: clamp(15px, 1.2vw, 18px);
+}
+
+.bestiario-close {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+}
+
+@media (max-width: 860px) {
+    .bestiario-body {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Effetto visivo per schede non ancora sbloccate. */
+.bestiario-image-wrap.is-locked::after {
+    content: attr(data-lock);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 1px solid #8b8b8b;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    background: rgba(18, 18, 18, 0.88);
+    color: #d6d6d6;
+}
+
+.bestiario-image-wrap img.is-locked {
+    filter: grayscale(1) brightness(0.35) contrast(1.1);
+}
+
+.effect-mini-icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    vertical-align: -2px;
+    margin-right: 4px;
+}
+
+
+
+/* Tema pergamena: popup bestiario, solo test home per ora. */
+#bestiario-modal .bestiario-card {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 18% 14%, rgba(255, 248, 225, 0.58), rgba(255, 248, 225, 0) 36%),
+        radial-gradient(circle at 84% 86%, rgba(102, 64, 30, 0.24), rgba(102, 64, 30, 0) 44%),
+        repeating-linear-gradient(
+            -9deg,
+            rgba(76, 49, 23, 0.06) 0px,
+            rgba(76, 49, 23, 0.06) 2px,
+            rgba(229, 209, 173, 0) 2px,
+            rgba(229, 209, 173, 0) 10px
+        ),
+        linear-gradient(158deg, #f0ddb6 0%, #dbbe8d 55%, #c89f66 100%);
+    border: 2px solid rgba(56, 31, 12, 0.92);
+    outline: 1px solid rgba(255, 232, 189, 0.62);
+    outline-offset: -9px;
+    box-shadow:
+        0 20px 38px rgba(0, 0, 0, 0.46),
+        inset 0 0 0 2px rgba(90, 57, 24, 0.32),
+        inset 0 0 20px rgba(78, 47, 20, 0.2);
+}
+
+/* Doppia cornice decorativa stile pergamena. */
+#bestiario-modal .bestiario-card::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1.5px dashed rgba(72, 43, 20, 0.42);
+    border-radius: 14px;
+    pointer-events: none;
+}
+
+/* Miglioramento contrasto su elementi interni del bestiario. */
+#bestiario-modal .bestiario-head h2,
+#bestiario-modal .bestiario-index,
+#bestiario-modal .bestiario-info p {
+    color: #2b190b;
+    text-shadow: none;
+}
+
+#bestiario-modal .bestiario-image-wrap {
+    border: 1px solid #83633f;
+    background: rgba(255, 247, 227, 0.78);
+}
+
+#bestiario-modal .bestiario-controls button,
+#bestiario-modal .bestiario-close {
+    border: 1px solid #6f4c2a;
+    background: #f4e3bf;
+    color: #2a180b;
+}
+
+#bestiario-modal .bestiario-controls button:hover,
+#bestiario-modal .bestiario-close:hover {
+    background: #e6c992;
+}
+
+/* Blocco layout fisso: la finestra bestiario non cambia dimensione in base al contenuto. */
+#bestiario-modal .bestiario-card {
+    width: min(86vw, 760px);
+    height: min(76vh, 540px);
+    max-height: min(76vh, 540px);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow: hidden;
+}
+
+/* Corpo centrale scorrevole: evita che testo/immagine allarghino la card. */
+#bestiario-modal .bestiario-body {
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+#bestiario-modal .bestiario-info {
+    min-height: 0;
+    overflow: auto;
+    padding-right: 6px;
+}
+
+#bestiario-modal .bestiario-image-wrap {
+    min-height: 0;
+    height: 100%;
+}
+
+#bestiario-modal .bestiario-image-wrap img {
+    width: clamp(120px, 15vw, 180px);
+    height: clamp(120px, 15vw, 180px);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Adattamento mobile mantenendo la stabilita' della finestra. */
+@media (max-width: 860px) {
+    #bestiario-modal .bestiario-card {
+        height: min(86vh, 660px);
+        grid-template-rows: auto 1fr auto;
+    }
+
+    #bestiario-modal .bestiario-body {
+        grid-template-columns: 1fr;
+    }
+
+    #bestiario-modal .bestiario-image-wrap {
+        min-height: 180px;
+    }
+}
+
+
+
+
+/* Rifinitura chiusura bestiario: X centrata e margine interno alla pergamena. */
+#bestiario-modal .bestiario-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    font-size: 24px;
+    z-index: 6;
+}
+/* Allineamento header bestiario: indice stabile, mai sotto il tasto chiusura. */
+#bestiario-modal .bestiario-head {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding-right: 425px;
+}
+
+#bestiario-modal .bestiario-index {
+    justify-self: end;
+    align-self: center;
+    white-space: nowrap;
+}

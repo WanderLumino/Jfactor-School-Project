@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<!-- Commento generale file: struttura principale della pagina. -->
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno di Dante</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/png" href="assets/img/oggetti/favicon.png">
+    <script src="js/gameCore.js" defer></script>
+    <script src="js/lingua.js" defer></script>
+    <script src="js/musicManager.js" defer></script>
+    <script src="js/loading.js" defer></script>
+</head>
+
+<body>
+    <button id="skip-btn" class="skip-btn nascosto" data-i18n="loading_skip">Salta</button>
+
+    <div id="loading-chapter-label" class="loading-chapter-label"></div>
+
+    <div id="typewriter"></div>
+    <span class="cursor"></span>
+
+    <div id="loading-corner">
+        <img src="assets/img/oggetti/flame.gif" alt="" id="fuoco-img">
+        <div class="loading-status">
+            <h1 class="caricamento" data-i18n="loading_loading">Caricamento</h1>
+            <p id="puntini">...</p>
+        </div>
+    </div>
+
+    <!-- Audio che parte automaticamente -->
+    <audio id="audio" src="assets/audio/divinacommedia.mp3"></audio>
+
+    <div id="pause-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:9999;align-items:center;justify-content:center;">
+        <div style="text-align:center;color:#f5e6c8;font-family:'Cinzel',serif;min-width:260px;">
+            <p style="font-size:42px;letter-spacing:3px;margin:0 0 24px;">⏸ PAUSA</p>
+            <div style="margin-bottom:20px;">
+                <label style="display:block;font-size:14px;margin-bottom:8px;opacity:0.8;">Volume Musica</label>
+                <input type="range" id="pause-volume-loading" min="0" max="100" value="70" style="width:200px;accent-color:#a86e36;">
+            </div>
+            <p style="font-size:15px;margin-top:8px;opacity:0.6;">Premi ESC per continuare</p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+

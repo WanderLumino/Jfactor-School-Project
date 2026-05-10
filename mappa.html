@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<!-- Commento generale file: struttura principale della pagina. -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno di Dante</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/mappa.css">
+    <link rel="stylesheet" href="css/bestiario.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/png" href="assets/img/oggetti/favicon.png">
+    <script src="js/gameCore.js" defer></script>
+    <script src="js/lingua.js" defer></script>
+    <script src="js/musicManager.js" defer></script>
+</head>
+<body>
+    <div id="schermo-principale">
+        <canvas id="canvas-mappa" width="800" height="600"></canvas>
+        <canvas id="canvas-sprite" width="800" height="600"></canvas>
+        <canvas id="minimappa" width="80" height="80"></canvas>
+
+        <div id="scanlines"></div>
+
+        <div id="hud">
+            <div class="hud-top-buttons">
+                <button id="btn-backpack" class="hud-backpack">Inventario (B)</button>
+                <button id="btn-codex-map" class="hud-backpack hud-codex">Bestiario</button>
+            </div>
+            <div id="titolo-hud">INFERNO - CERCHIO I: LIMBO</div>
+            <div id="messaggio-hud"></div>
+        </div>
+
+        <div id="overlay-combattimento"></div>
+    </div>
+
+    <div id="encounter-modal" class="non-visibile">
+        <div class="encounter-box">
+            <h2 data-i18n="mappa_encounter_title">Scontro con un dannato</h2>
+            <p data-i18n="mappa_encounter_subtitle">Scegli come affrontare questa prova.</p>
+            <div class="encounter-actions">
+                <button id="btn-fight-combat" class="mode-btn">
+                    <img src="assets/img/oggetti/spada.png" alt="Combattimento">
+                    <span data-i18n="mappa_mode_combat">Combattimento</span>
+                </button>
+                <button id="btn-fight-question" class="mode-btn">
+                    <img src="assets/img/oggetti/question.png" alt="Domande">
+                    <span data-i18n="mappa_mode_question">Domande</span>
+                </button>
+            </div>
+            <div id="coin-box" class="non-visibile">
+                <h3 id="coin-title" data-i18n="mappa_coin_title">Lancio Moneta</h3>
+                <img id="coin-image" src="assets/img/oggetti/coin_head_frames/frame_000.png" alt="Coin toss">
+                <p id="coin-result">-</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="backpack-modal" class="non-visibile">
+        <div class="backpack-box">
+            <button id="backpack-close" class="backpack-close" type="button">X</button>
+            <h2 id="backpack-title">Inventario Dannati</h2>
+            <p id="backpack-subtitle">Scegli il dannato da schierare per primo prima del prossimo scontro.</p>
+            <div id="backpack-guide" class="backpack-guide-bubble non-visibile"></div>
+            <div id="backpack-list" class="backpack-list"></div>
+            <div id="backpack-items" class="backpack-items"></div>
+            <div id="backpack-detail" class="backpack-detail">
+                <p>Seleziona un dannato per vedere i dettagli.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="bestiario-modal" class="bestiario-modal hidden">
+        <div class="bestiario-card">
+            <div class="bestiario-head">
+                <h2 id="bestiario-title">Bestiario</h2>
+                <div class="bestiario-index" id="bestiario-index">1 / 16</div>
+                <button id="bestiario-close" class="bestiario-close" type="button">X</button>
+            </div>
+            <div class="bestiario-body">
+                <div class="bestiario-image-wrap">
+                    <img id="bestiario-image" src="assets/img/bestie/leone_idle_frames/frame_000.png" alt="Bestiario">
+                </div>
+                <div class="bestiario-info">
+                    <p id="bestiario-nome"></p>
+                    <p id="bestiario-tipo"></p>
+                    <p id="bestiario-hp"></p>
+                    <p id="bestiario-atk"></p>
+                    <p id="bestiario-special-name"></p>
+                    <p id="bestiario-special-damage"></p>
+                    <p id="bestiario-special-desc"></p>
+                    <p id="bestiario-passive-name"></p>
+                    <p id="bestiario-passive-desc"></p>
+                </div>
+            </div>
+            <div class="bestiario-controls">
+                <button id="bestiario-prev" type="button"><</button>
+                <button id="bestiario-next" type="button">></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bestiario.js" defer></script>
+    <script src="js/mappa.js" defer></script>
+</body>
+</html>

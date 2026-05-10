@@ -1,0 +1,12 @@
+{
+    "quizQuestionsPerRun": 3,
+    "quizMinCorrectToWin": 2,
+    "maxRosterSize": 4,
+    "recruitReplacePolicy": "weakest_maxhp",
+    "mappaCollisionRadius": 50,
+    "mappaEnemyFrameCount": 6,
+    "mappaEnemyAnimStepMs": 100,
+    "mappaEncounterTransitionMs": 360,
+    "mappaEnemyCount": 4,
+    "mappaEnemySpawnMode": "fixed"
+}

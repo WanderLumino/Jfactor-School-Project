@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<!-- Commento generale file: struttura principale della pagina. -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno di Dante</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/combat.css">
+    <link rel="stylesheet" href="css/bestiario.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/png" href="assets/img/oggetti/favicon.png">
+    <script src="js/gameCore.js" defer></script>
+    <script src="js/lingua.js" defer></script>
+    <script src="js/bestiario.js" defer></script>
+    <script src="js/musicManager.js" defer></script>
+</head>
+<body>
+    <main id="battle-screen">
+        <section class="status-card player-card">
+            <h2 id="player-name" data-i18n="combat_player_default">Alleato</h2>
+            <p id="player-kind">-</p>
+            <div class="bar-wrap"><div id="player-hp" class="bar"></div></div>
+            <p id="player-hp-text">0 / 0</p>
+            <div class="bar-wrap energy-wrap"><div id="player-energy" class="bar energy-bar"></div></div>
+            <p id="player-energy-text">Energia: 0 / 100</p>
+            <div id="player-status-inline" class="status-badges status-inline"></div>
+        </section>
+
+        <section class="arena" id="battle-arena">
+            <img id="player-sprite" class="unit player" src="assets/img/bestie/leone_idle_frames/frame_000.png" alt="Alleato">
+            <img id="enemy-sprite" class="unit enemy" src="assets/img/dannati/Cerchio_1/cerchio_1_pagano_idle_frames/frame_000.png" alt="Nemico">
+        </section>
+
+        <section class="status-card enemy-card">
+            <h2 id="enemy-name" data-i18n="combat_enemy_default">Nemico</h2>
+            <p id="enemy-kind">-</p>
+            <div class="bar-wrap"><div id="enemy-hp" class="bar"></div></div>
+            <p id="enemy-hp-text">0 / 0</p>
+            <div class="bar-wrap energy-wrap"><div id="enemy-energy" class="bar energy-bar"></div></div>
+            <p id="enemy-energy-text">Energia: 0 / 100</p>
+            <div id="enemy-status-inline" class="status-badges status-inline is-enemy"></div>
+        </section>
+
+        <section id="panel">
+            <p id="battle-log" data-i18n="combat_log_start">Inizio del combattimento.</p>
+            <div id="inventory-hud" class="inventory-hud" aria-label="Inventario battaglia"></div>
+            <div class="actions" id="battle-actions">
+                <button data-action="attacco" data-i18n="combat_action_attack">Attacco</button>
+                <button data-action="speciale" data-i18n="combat_action_special">Speciale</button>
+                <button data-action="descrizione" data-i18n="combat_action_roster">Descrizione squadra</button>
+                <button data-action="switch">Switch</button>
+                <button data-action="fuga">Fuga (3)</button>
+                <button data-action="items">Oggetti</button>
+                <button data-action="codex">Bestiario</button>
+            </div>
+            <div class="actions hidden" id="recruit-actions">
+                <button data-action="recluta-si" data-i18n="combat_recruit_yes">Aggiungi alla squadra</button>
+                <button data-action="recluta-no" data-i18n="combat_recruit_no">Lascia andare</button>
+            </div>
+            <div class="actions hidden" id="end-actions">
+                <button data-action="torna-mappa" data-i18n="combat_return_portal">Torna al portale</button>
+            </div>
+            <div id="roster-panel" class="roster-panel hidden"></div>
+        </section>
+    </main>
+
+    <!-- Popup dettagli unita aperto al click sull'immagine. -->
+    <div id="unit-modal" class="unit-modal hidden">
+        <div class="unit-modal-card">
+            <button id="unit-modal-close" class="unit-modal-close" aria-label="Chiudi" data-i18n-aria-label="common_close">X</button>
+            <img id="unit-modal-image" src="" alt="Scheda unità">
+            <h3 id="unit-modal-title"></h3>
+            <p id="unit-modal-body"></p>
+        </div>
+    </div>
+
+    <!-- Popup cambio dannato quando l'alleato corrente viene sconfitto. -->
+    <div id="reserve-modal" class="unit-modal hidden">
+        <div class="unit-modal-card">
+            <h3 id="reserve-title" class="reserve-title" data-i18n="combat_reserve_title">Il tuo dannato e stato sconfitto</h3>
+            <p id="reserve-subtitle" class="reserve-subtitle" data-i18n="combat_reserve_subtitle">Scegli un dannato rimasto nella riserva:</p>
+            <div id="reserve-list" class="reserve-list"></div>
+        </div>
+    </div>
+
+    <!-- Overlay finale con messaggio di game over. -->
+    <div id="gameover-overlay" class="gameover-overlay hidden">
+        <div class="gameover-text">GAME OVER</div>
+    </div>
+
+    
+    <div id="coin-overlay" class="unit-modal hidden">
+        <div class="unit-modal-card">
+            <h3 id="coin-title">Lancio Moneta</h3>
+            <img id="coin-image" src="assets/img/oggetti/coin_head_frames/frame_000.png" alt="Coin" style="width:160px;height:160px;object-fit:contain;display:block;margin:10px auto;">
+            <p id="coin-result" style="text-align:center;margin:0;"></p>
+        </div>
+    </div>
+
+    <div id="bestiario-modal" class="bestiario-modal hidden">
+        <div class="bestiario-card">
+            <div class="bestiario-head">
+                <h2 id="bestiario-title">Bestiario</h2>
+                <div class="bestiario-index" id="bestiario-index">1 / 16</div>
+                <button id="bestiario-close" class="bestiario-close" type="button">X</button>
+            </div>
+            <div class="bestiario-body">
+                <div class="bestiario-image-wrap">
+                    <img id="bestiario-image" src="assets/img/bestie/leone_idle_frames/frame_000.png" alt="Bestiario">
+                </div>
+                <div class="bestiario-info">
+                    <p id="bestiario-nome"></p>
+                    <p id="bestiario-tipo"></p>
+                    <p id="bestiario-hp"></p>
+                    <p id="bestiario-atk"></p>
+                    <p id="bestiario-special-name"></p>
+                    <p id="bestiario-special-damage"></p>
+                    <p id="bestiario-special-desc"></p>
+                    <p id="bestiario-passive-name"></p>
+                    <p id="bestiario-passive-desc"></p>
+                </div>
+            </div>
+            <div class="bestiario-controls"><button id="bestiario-prev" type="button"><</button><button id="bestiario-next" type="button">></button></div>
+        </div>
+    </div>
+    <div id="turn-overlay" class="turn-overlay hidden">
+        <div class="turn-overlay-box">
+            <p id="turn-overlay-text">Turno Giocatore</p>
+        </div>
+    </div>
+
+    <script src="js/combat.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

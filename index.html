@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+
+<!-- Commento generale file: struttura principale della pagina. -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno di Dante</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/bestiario.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/png" href="assets/img/oggetti/favicon.png">
+    <script src="js/gameCore.js" defer></script>
+    <script src="js/lingua.js" defer></script>
+    <script src="js/bestiario.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/musicManager.js" defer></script>
+</head>
+<body>
+    <div class="menu-container">
+        <header class="menu-header">
+            <h1 data-i18n="titolo_gioco">Viaggio di Dante nell'Inferno</h1>
+            <div class="language-switch">
+                <button class="lang-btn" data-lang="it">IT</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </header>
+
+        <div class="heroes">
+            <div class="hero-card">
+                <img id="menu-dante" src="assets/img/personaggi/dante_spritesheet/Dante_idle_frames/frame_000.png" alt="Dante">
+                <span>Dante</span>
+            </div>
+            <div class="hero-card">
+                <img id="menu-virgilio" src="assets/img/personaggi/virgilio_spritesheet/Virgilio_idle_frames/frame_000.png" alt="Virgilio">
+                <span>Virgilio</span>
+            </div>
+        </div>
+
+        <main class="menu-main">
+            <button id="btn-gioca" class="menu-button" data-i18n="bottone_gioca">Gioca</button>
+            <button id="btn-impostazioni" class="menu-button" data-i18n="bottone_impostazioni">Impostazioni</button>
+            <button id="btn-codex" class="menu-button">Bestiario</button>
+        </main>
+
+        <div id="finestra-impostazioni" class="impostazioni-modal nascosto">
+            <div class="impostazioni-contenuto">
+                <h2 data-i18n="titolo_impostazioni">Impostazioni</h2>
+
+                <div class="impostazione-riga">
+                    <label for="volume-musica" data-i18n="etichetta_volume_musica">Volume musica</label>
+                    <input type="range" id="volume-musica" min="0" max="100" value="70">
+                </div>
+
+                <section class="manuale-sezione">
+                    <h3 data-i18n="manuale_movimento_titolo">Movimento</h3>
+                    <p data-i18n="manuale_movimento_testo">Usa W A S D o le frecce per muovere Dante. Avvicinati ai dannati per iniziare una sfida.</p>
+                    <img class="movimento-wasd" src="assets/img/oggetti/wasd.png" alt="Schema tasti WASD">
+                </section>
+
+                <section class="manuale-sezione">
+                    <h3 data-i18n="manuale_battaglia_titolo">Battaglia</h3>
+                    <p data-i18n="manuale_battaglia_testo">Quando incontri un dannato puoi scegliere: combattimento a turni o quiz da 3 domande. Con la vittoria puoi reclutare il nemico.</p>
+                </section>
+
+                <section class="manuale-sezione">
+                    <h3 data-i18n="manuale_storia_titolo">Storia</h3>
+                    <p data-i18n="manuale_storia_testo">Dante, guidato da Virgilio, attraversa i cerchi dell'Inferno ispirati alla Divina Commedia.</p>
+                </section>
+
+                <button id="btn-chiudi-impostazioni" class="menu-button secondario" data-i18n="bottone_chiudi">Chiudi</button>
+            </div>
+        </div>
+    </div>
+    <div id="bestiario-modal" class="bestiario-modal hidden">
+        <div class="bestiario-card">
+            <div class="bestiario-head">
+                <h2 id="bestiario-title">Bestiario</h2>
+                <div class="bestiario-index" id="bestiario-index">1 / 16</div>
+                <button id="bestiario-close" class="bestiario-close" type="button">X</button>
+            </div>
+            <div class="bestiario-body">
+                <div class="bestiario-image-wrap">
+                    <img id="bestiario-image" src="assets/img/bestie/leone_idle_frames/frame_000.png" alt="Bestiario">
+                </div>
+                <div class="bestiario-info">
+                    <p id="bestiario-nome"></p>
+                    <p id="bestiario-tipo"></p>
+                    <p id="bestiario-hp"></p><p id="bestiario-atk"></p>
+                    <p id="bestiario-special-name"></p>
+                    <p id="bestiario-special-damage"></p>
+                    <p id="bestiario-special-desc"></p>
+                    <p id="bestiario-passive-name"></p>
+                    <p id="bestiario-passive-desc"></p>
+                </div>
+            </div>
+            <div class="bestiario-controls">
+                <button id="bestiario-prev" type="button"><</button>
+                <button id="bestiario-next" type="button">></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+﻿{
+    "leone":  {
+                  "nome":  "Leone",
+                  "specie":  "leone",
+                  "ruolo":  "Starter",
+                  "descrizione":  "Bestia della Selva Oscura, forte in attacco e crescita in combattimento."
+              },
+    "lonza":  {
+                  "nome":  "Lonza",
+                  "specie":  "lonza",
+                  "ruolo":  "Starter",
+                  "descrizione":  "Rapida e astuta, eccelle nel controllo del ritmo."
+              },
+    "lupa":  {
+                 "nome":  "Lupa",
+                 "specie":  "lupa",
+                 "ruolo":  "Starter",
+                 "descrizione":  "Resistente e opportunista, premia i finali di scontro."
+             },
+    "limbo":  {
+                  "nome":  "Achille",
+                  "specie":  "limbo",
+                  "ruolo":  "Cerchio I",
+                  "descrizione":  "Difensore equilibrato con indebolimento."
+              },
+    "lussurioso":  {
+                       "nome":  "Paolo e Francesca",
+                       "specie":  "lussurioso",
+                       "ruolo":  "Cerchio II",
+                       "descrizione":  "Controllo mentale con charme."
+                   },
+    "goloso":  {
+                   "nome":  "Ciacco",
+                   "specie":  "goloso",
+                   "ruolo":  "Cerchio III",
+                   "descrizione":  "Sottrae vitalità e punisce i bersagli feriti."
+               },
+    "avaro":  {
+                  "nome":  "Ecclesiastici anonimi",
+                  "specie":  "avaro",
+                  "ruolo":  "Cerchio IV",
+                  "descrizione":  "Difensore con crescita da colpi critici."
+              },
+    "prodigo":  {
+                    "nome":  "Gli Sperperatori Eterni",
+                    "specie":  "prodigo",
+                    "ruolo":  "Cerchio IV",
+                    "descrizione":  "Accumula marchi di peste e li fa esplodere."
+                },
+    "iracondo":  {
+                     "nome":  "Filippo Argenti",
+                     "specie":  "iracondo",
+                     "ruolo":  "Cerchio V",
+                     "descrizione":  "Danni periodici e potenza crescente."
+                 },
+    "accidioso":  {
+                      "nome":  "I Sommersi dello Stige",
+                      "specie":  "accidioso",
+                      "ruolo":  "Cerchio V",
+                      "descrizione":  "Schivata e recupero nelle fasi lunghe."
+                  },
+    "eretico":  {
+                    "nome":  "Farinata degli Uberti",
+                    "specie":  "eretico",
+                    "ruolo":  "Cerchio VI",
+                    "descrizione":  "Brucia il bersaglio e mantiene pressione."
+                },
+    "violenza_altri":  {
+                           "nome":  "Attila",
+                           "specie":  "violenza_altri",
+                           "ruolo":  "Cerchio VII",
+                           "descrizione":  "Colpi brutali e danno puro."
+                       },
+    "violenza_se":  {
+                        "nome":  "Pier della Vigna",
+                        "specie":  "violenza_se",
+                        "ruolo":  "Cerchio VII",
+                        "descrizione":  "Specchio letale con riflessione danni."
+                    },
+    "violenza_dio":  {
+                         "nome":  "Brunetto Latini",
+                         "specie":  "violenza_dio",
+                         "ruolo":  "Cerchio VII",
+                         "descrizione":  "Immune a fasi critiche e auto-purificazione."
+                     },
+    "fraudolento":  {
+                        "nome":  "I Millevolti",
+                        "specie":  "fraudolento",
+                        "ruolo":  "Cerchio VIII",
+                        "descrizione":  "Annulla i vantaggi avversari."
+                    },
+    "traditore":  {
+                      "nome":  "Lucifero",
+                      "specie":  "traditore",
+                      "ruolo":  "Boss Finale",
+                      "descrizione":  "Signore del Cocito, due fasi e pressione costante."
+                  }
+}

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<!-- Commento generale file: struttura principale della pagina. -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno di Dante</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/porta.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/png" href="assets/img/oggetti/favicon.png">
+    <script src="js/gameCore.js" defer></script>
+    <script src="js/lingua.js" defer></script>
+    <script src="js/musicManager.js" defer></script>
+</head>
+<body>
+    <img id="scene-bg" src="assets/img/mappe/porta_antinferno.png" alt="Sfondo porta">
+
+    <div id="hud">
+        <span id="hud-label" data-i18n="porta_hud_label">CERCHIO ATTUALE</span>
+        <span id="hud-cerchio">I</span>
+        <span id="hud-nome">Limbo</span>
+    </div>
+
+    <div id="titolo" data-i18n="porta_titolo">Porta d'Inferno</div>
+    <div id="cartiglio" data-i18n-html="porta_cartiglio">DA QUI<br>INIZIA<br>IL VIAGGIO</div>
+
+    <img id="dante-sprite" src="assets/img/personaggi/dante_spritesheet/Dante_idle_frames/frame_000.png" alt="Dante">
+    <img id="virgilio-sprite" src="assets/img/personaggi/virgilio_spritesheet/Virgilio_idle_frames/frame_000.png" alt="Virgilio">
+
+    <button id="btn-porta" aria-label="Apri la porta"></button>
+
+    <div id="slot-container" class="hidden">
+        <div id="slot-frame">
+            <div id="slot-track"></div>
+            <div id="slot-line-top"></div>
+            <div id="slot-line-bot"></div>
+        </div>
+        <div id="slot-range"></div>
+        <div id="slot-hint" data-i18n="porta_slot_hint_click">CLICCA LA PORTA PER FERMARE</div>
+    </div>
+
+    <script src="js/porta.js"></script>
+</body>
+</html>
+
+
+
+

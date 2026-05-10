@@ -1,0 +1,39 @@
+1. selva oscura backgroundImage 
+ - type: png o jpg
+ - size: 1920x1080
+ - stile: pixel art
+ - contenuto: dark bosco/foresta, alberi, nebbia
+
+2. Dante walk spritesheet
+ - type: png(trasparente)
+ - size: 64x64 o 96x96
+ - frame: 4-6 frame (ciclo del cammino)
+ - la nomina degli immagini:
+    - dante_walk_1.png
+    - dante_walk_2.png
+    - dante_walk_3.png
+    - ...
+
+3. tre animali feroci(lupa, leone, lonza)
+ - type: png
+ - size: 64x64 o 96x96
+ - almeno 1 frame
+ - la nomina degli immagini:
+    - lupa.png
+    - leone.png
+    - lonza.png
+
+4. Virgilio
+ - type: png
+ - size: 64x64 o 96x96
+ - 1-2 frame
+ - la nomina degli immagini:
+    - virgilio.png
+
+5. posta dell'Inferno
+ - type: png
+ - size: 250x400
+ - stile: pixel art
+ - la nomina degli immagini:
+    - porta_inferno.png
+

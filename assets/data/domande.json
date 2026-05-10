@@ -1,0 +1,322 @@
+﻿[
+    {
+        "id": 1,
+        "question_en": "Who is the main protagonist of the Divine Comedy?",
+        "question_it": "Chi è il protagonista principale della Divina Commedia?",
+        "hint_en": "It is the poet who gets lost in a dark wood.",
+        "choices": ["Dante Alighieri", "Virgil", "Beatrice", "Ulysses"],
+        "correct_index": 0
+    },
+    {
+        "id": 2,
+        "question_en": "Who guides Dante through most of the Inferno?",
+        "question_it": "Chi guida Dante per la maggior parte dell'Inferno?",
+        "hint_en": " A Roman poet.",
+        "choices": ["Virgil", "Beatrice", "St. Peter", "Minos"],
+        "correct_index": 0
+    },
+    {
+        "id": 3,
+        "question_en": "How many circles are there in Dante's Inferno?",
+        "question_it": "Quanti cerchi ci sono nell'Inferno di Dante?",
+        "hint_en": "Single digit, more than eight.",
+        "choices": ["7", "8", "9", "10"],
+        "correct_index": 2
+    },
+    {
+        "id": 4,
+        "question_en": "Which sin is punished in the second circle?",
+        "question_it": "Quale peccato è punito nel secondo cerchio?",
+        "hint_en": "It concerns uncontrolled desire.",
+        "choices": ["Greed", "Lust", "Wrath", "Betrayal"],
+        "correct_index": 1
+    },
+    {
+        "id": 5,
+        "question_en": "What famous line opens Dante's Inferno in the English translation?",
+        "question_it": "Quale celebre verso apre l'Inferno in traduzione inglese?",
+        "hint_en": "The opening line mentions the middle of life.",
+        "choices": ["Midway upon the journey of our life", "Abandon all hope", "Love that moves the sun", "I came, I saw, I conquered"],
+        "correct_index": 0
+    },
+    {
+        "id": 6,
+        "question_en": "Which beast symbolizes greed in the dark wood?",
+        "question_it": "Quale bestia simboleggia l'avidità nella selva oscura?",
+        "hint_en": "It is a she-wolf.",
+        "choices": ["Leopard", "Lion", "She-wolf", "Serpent"],
+        "correct_index": 2
+    },
+    {
+        "id": 7,
+        "question_en": "Who is the judge assigning souls to the circles of Hell?",
+        "question_it": "Chi è il giudice che assegna le anime ai cerchi nell'Inferno?",
+        "hint_en": "He wraps his tail around himself.",
+        "choices": ["Charon", "Minos", "Cerberus", "Pluto"],
+        "correct_index": 1
+    },
+    {
+        "id": 8,
+        "question_en": "Which river do the wrathful and sullen inhabit?",
+        "question_it": "In quale fiume si trovano gli iracondi e gli accidiosi?",
+        "hint_en": "It is a swamp in the fifth circle.",
+        "choices": ["Acheron", "Styx", "Phlegethon", "Lethe"],
+        "correct_index": 1
+    },
+    {
+        "id": 9,
+        "question_en": "Which monster guards the gluttons?",
+        "question_it": "Quale mostro sorveglia i golosi?",
+        "hint_en": "Three-headed dog.",
+        "choices": ["Geryon", "Cerberus", "Hydra", "Medusa"],
+        "correct_index": 1
+    },
+    {
+        "id": 10,
+        "question_en": "What type of weather torments the lustful?",
+        "question_it": "Quale clima tormenta i lussuriosi?",
+        "hint_en": "An endless violent wind.",
+        "choices": ["Burning rain", "Frozen hail", "Dark blizzard", "Whirling storm"],
+        "correct_index": 3
+    },
+    {
+        "id": 11,
+        "question_en": "Which circle contains the heretics in flaming tombs?",
+        "question_it": "Quale cerchio contiene gli eretici nelle tombe infuocate?",
+        "hint_en": "It is the sixth.",
+        "choices": ["Fourth circle", "Fifth circle", "Sixth circle", "Seventh circle"],
+        "correct_index": 2
+    },
+    {
+        "id": 12,
+        "question_en": "Who transports souls across the Acheron?",
+        "question_it": "Chi trasporta le anime attraverso l'Acheronte?",
+        "hint_en": "The old ferryman.",
+        "choices": ["Minos", "Charon", "Virgil", "Phlegyas"],
+        "correct_index": 1
+    },
+    {
+        "id": 13,
+        "question_en": "What is contrapasso in Dante's Inferno?",
+        "question_it": "Che cos'è il contrapasso nell'Inferno di Dante?",
+        "hint_en": "The punishment mirrors the sin.",
+        "choices": ["A prayer ritual", "A poetic meter", "A fitting punishment", "A type of demon"],
+        "correct_index": 2
+    },
+    {
+        "id": 14,
+        "question_en": "Which sin is punished in the ninth circle?",
+        "question_it": "Quale peccato è punito nel nono cerchio?",
+        "hint_en": "Betrayal.",
+        "choices": ["Violence", "Fraud", "Treachery", "Lust"],
+        "correct_index": 2
+    },
+    {
+        "id": 15,
+        "question_en": "Who appears as the ultimate prisoner in the frozen lake?",
+        "question_it": "Chi appare come prigioniero finale nel lago ghiacciato?",
+        "hint_en": "The fallen angel.",
+        "choices": ["Lucifer", "Ulysses", "Cato", "Brutus"],
+        "correct_index": 0
+    },
+    {
+        "id": 16,
+        "question_en": "Which two poets travel together in Dante's Inferno?",
+        "question_it": "Quali due poeti viaggiano insieme nell'Inferno?",
+        "hint_en": "A medieval Italian poet and an ancient Roman poet.",
+        "choices": ["Dante and Ovid", "Dante and Virgil", "Virgil and Homer", "Dante and Horace"],
+        "correct_index": 1
+    },
+    {
+        "id": 17,
+        "question_en": "What is the City of Dis?",
+        "question_it": "Che cos'è la città di Dite?",
+        "hint_en": "It marks the lower part of Hell.",
+        "choices": ["A heavenly garden", "The infernal city", "A monastery", "A Roman forum"],
+        "correct_index": 1
+    },
+    {
+        "id": 18,
+        "question_en": "Which circle is dedicated to violence?",
+        "question_it": "Quale cerchio è dedicato alla violenza?",
+        "hint_en": "After the heretics.",
+        "choices": ["Fifth", "Sixth", "Seventh", "Eighth"],
+        "correct_index": 2
+    },
+    {
+        "id": 19,
+        "question_en": "In Inferno, in which circle is fraud punished?",
+        "question_it": "Nell'Inferno, la frode è punita in quale cerchio?",
+        "hint_en": "Second to last circle.",
+        "choices": ["Sixth", "Seventh", "Eighth", "Ninth"],
+        "correct_index": 2
+    },
+    {
+        "id": 20,
+        "question_en": "Which sin is Francesca da Rimini associated with ?",
+        "question_it": "A quale peccato è associata Francesca da Rimini?",
+        "hint_en": "A tragic love story.",
+        "choices": ["Greed", "Lust", "Heresy", "Treachery"],
+        "correct_index": 1
+    },
+    {
+        "id": 21,
+        "question_en": "What element dominates the final region of Hell?",
+        "question_it": "Quale elemento domina la regione finale dell'Inferno?",
+        "hint_en": "Not fire.",
+        "choices": ["Smoke", "Wind", "Ice", "Rain"],
+        "correct_index": 2
+    },
+    {
+        "id": 22,
+        "question_en": "What does Virgil symbolize for Dante?",
+        "question_it": "Che cosa simboleggia Virgilio per Dante?",
+        "hint_en": "Human reason.",
+        "choices": ["Faith", "Grace", "Reason", "Fortune"],
+        "correct_index": 2
+    },
+    {
+        "id": 23,
+        "question_en": "Which inscription marks the gate of Hell?",
+        "question_it": "Quale iscrizione segna la porta dell'Inferno?",
+        "hint_en": "It warns every visitor to abandon hope.",
+        "choices": ["Abandon all hope, ye who enter here", "Know thyself", "Carpe diem", "Memento mori"],
+        "correct_index": 0
+    },
+    {
+        "id": 24,
+        "question_en": "How is Dante's journey generally interpreted?",
+        "question_it": "Come viene generalmente interpretato il viaggio di Dante?",
+        "hint_en": "It is both literal and symbolic.",
+        "choices": ["Only political satire", "A spiritual journey", "A travel diary", "A scientific report"],
+        "correct_index": 1
+    },
+    {
+        "id": 25,
+        "question_en": "At the start, Dante is lost in a...",
+        "question_it": "All'inizio, Dante si perde in una...",
+        "hint_en": "Dark wood.",
+        "choices": ["Sunny meadow", "Desert", "Dark forest", "Marble city"],
+        "correct_index": 2
+    },
+    {
+        "id": 26,
+        "question_en": "Who sends Virgil to help Dante?",
+        "question_it": "Chi manda Virgilio ad aiutare Dante?",
+        "hint_en": "She becomes Dante's heavenly guide later.",
+        "choices": ["Beatrice", "Francesca", "Lucia", "Mary Magdalene"],
+        "correct_index": 0
+    },
+    {
+        "id": 27,
+        "question_en": "In which circle are the gluttons punished?",
+        "question_it": "In quale cerchio vengono puniti i golosi?",
+        "hint_en": "It comes after the lustful one.",
+        "choices": ["Second", "Third", "Fourth", "Fifth"],
+        "correct_index": 1
+    },
+    {
+        "id": 28,
+        "question_en": "What creature carries Dante and Virgil to Malebolge?",
+        "question_it": "Quale creatura trasporta Dante e Virgilio a Malebolge?",
+        "hint_en": "A monster with a human face and a scorpion tail.",
+        "choices": ["Minotaur", "Cerberus", "Geryon", "Chimera"],
+        "correct_index": 2
+    },
+    {
+        "id": 29,
+        "question_en": "What is Malebolge?",
+        "question_it": "Che cos'è Malebolge?",
+        "hint_en": "A structure inside the eighth circle.",
+        "choices": ["The frozen lake", "Ten ditches of fraud", "The gate of Hell", "A river of blood"],
+        "correct_index": 1
+    },
+    {
+        "id": 30,
+        "question_en": "Which sinners are immersed in boiling blood in Inferno?",
+        "question_it": "Quali peccatori sono immersi nel sangue bollente nell'Inferno?",
+        "hint_en": "Violent against others.",
+        "choices": ["The lustful", "The violent", "The hypocrites", "The traitors"],
+        "correct_index": 1
+    },
+    {
+        "id": 31,
+        "question_en": "Who is the famous Greek hero Dante meets among the fraudulent counselors?",
+        "question_it": "Qual è il celebre eroe greco che Dante incontra tra i consiglieri fraudolenti?",
+        "hint_en": "He speaks about the voyage beyond the Pillars of Hercules.",
+        "choices": ["Achilles", "Aeneas", "Ulysses", "Hector"],
+        "correct_index": 2
+    },
+    {
+        "id": 32,
+        "question_en": "Which phrase describes the fate of neutral souls before Hell?",
+        "question_it": "Quale frase descrive il destino delle anime ignave prima dell'Inferno?",
+        "hint_en": "Rejected by both Heaven and Hell.",
+        "choices": ["They rest in peace", "They are forever undecided", "They sing with angels", "They become stars"],
+        "correct_index": 1
+    },
+    {
+        "id": 33,
+        "question_en": "What punishment do fortune-tellers receive in Inferno?",
+        "question_it": "Quale punizione ricevono gli indovini nell'Inferno?",
+        "hint_en": "Their heads are turned backward.",
+        "choices": ["Hands tied forever", "Tongues cut", "Heads twisted backward", "Eyes covered with fire"],
+        "correct_index": 2
+    },
+    {
+        "id": 34,
+        "question_en": "Who guards the violent in the first ring of the seventh circle?",
+        "question_it": "Chi sorveglia i violenti nel primo girone del settimo cerchio?",
+        "hint_en": "Half-man, half-horse creatures.",
+        "choices": ["Harpies", "Centaurs", "Giants", "Furies"],
+        "correct_index": 1
+    },
+    {
+        "id": 35,
+        "question_en": "Which wood appears in the second ring of the seventh circle?",
+        "question_it": "Quale selva appare nel secondo girone del settimo cerchio?",
+        "hint_en": "It contains the souls of suicide victims transformed into trees.",
+        "choices": ["A golden forest", "A dark thorny wood", "An olive grove", "A cedar forest"],
+        "correct_index": 1
+    },
+    {
+        "id": 36,
+        "question_en": "How do Dante and Virgil exit Hell at the end of Inferno?",
+        "question_it": "Come escono Dante e Virgilio dall'Inferno alla fine dell'Inferno?",
+        "hint_en": "They climb using Lucifer's body.",
+        "choices": ["By a heavenly ladder", "By crossing a bridge of light", "By climbing down then up through the center of Earth", "By a boat guided by angels"],
+        "correct_index": 2
+    },
+    {
+        "id": 37,
+        "question_en": "Which traitors are chewed by Lucifer's three mouths?",
+        "question_it": "Quali traditori vengono maciullati nelle tre bocche di Lucifero?",
+        "hint_en": "One is Judas; the other two killed Caesar.",
+        "choices": ["Judas, Brutus, Cassius", "Cain, Abel, Judas", "Brutus, Antony, Cassius", "Ulysses, Diomedes, Judas"],
+        "correct_index": 0
+    },
+    {
+        "id": 38,
+        "question_en": "What is the final line of Inferno?",
+        "question_it": "Qual è l'ultimo verso dell'Inferno?",
+        "hint_en": "It mentions seeing the stars again.",
+        "choices": ["Abandon all hope", "Love moves the sun", "E quindi uscimmo a riveder le stelle", "Nel mezzo del cammin"],
+        "correct_index": 2
+    },
+    {
+        "id": 39,
+        "question_en": "Why is Inferno considered an allegory?",
+        "question_it": "Perché l'Inferno è considerato un'allegoria?",
+        "hint_en": "The journey represents moral and spiritual growth.",
+        "choices": ["It has no historical references", "It is only fantasy", "It symbolizes the soul's path", "It is a legal document"],
+        "correct_index": 2
+    },
+    {
+        "id": 40,
+        "question_en": "Which language style is Dante famous for in the Divine Comedy?",
+        "question_it": "Per quale scelta linguistica Dante è famoso nella Divina Commedia?",
+        "hint_en": "He wrote in vernacular language rather than Latin.",
+        "choices": ["Ancient Greek", "Latin only", "Italian vernacular", "French court language"],
+        "correct_index": 2
+    }
+]

@@ -1,0 +1,47 @@
+﻿{
+    "1":  {
+              "roman":  "I",
+              "name_it":  "Pagani virtuosi",
+              "name_en":  "Virtuous pagans"
+          },
+    "2":  {
+              "roman":  "II",
+              "name_it":  "Lussuriosi",
+              "name_en":  "Lustful"
+          },
+    "3":  {
+              "roman":  "III",
+              "name_it":  "Golosi",
+              "name_en":  "Gluttons"
+          },
+    "4":  {
+              "roman":  "IV",
+              "name_it":  "Avari / Prodighi",
+              "name_en":  "Avaricious / Prodigal"
+          },
+    "5":  {
+              "roman":  "V",
+              "name_it":  "Iracondi / Accidiosi",
+              "name_en":  "Wrathful / Sullen"
+          },
+    "6":  {
+              "roman":  "VI",
+              "name_it":  "Eretici",
+              "name_en":  "Heretics"
+          },
+    "7":  {
+              "roman":  "VII",
+              "name_it":  "Violenti",
+              "name_en":  "Violent"
+          },
+    "8":  {
+              "roman":  "VIII",
+              "name_it":  "Fraudolenti",
+              "name_en":  "Fraudulent"
+          },
+    "9":  {
+              "roman":  "IX",
+              "name_it":  "Traditori",
+              "name_en":  "Traitors"
+          }
+}

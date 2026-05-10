@@ -1,0 +1,38 @@
+{
+    "it": {
+        "limbo": "Cerchio 1 - Pagani virtuosi (Achille)\n\nAnime nobili e valorose, ma prive della fede cristiana. Non soffrono tormenti fisici, ma vivono in un'eternità di desiderio senza speranza. La loro grandezza è offuscata da un destino incompiuto.",
+        "lussurioso": "Cerchio 2 - Lussuriosi (Paolo Malatesta e Francesca da Rimini)\n\nTravolti da una bufera incessante, simbolo delle passioni che li dominarono in vita. Il loro amore è eterno, ma condannato a non trovare pace. Desiderio e tormento diventano la stessa cosa.",
+        "goloso": "Cerchio 3 - Golosi (Ciacco)\n\nImmersi nel fango sotto una pioggia sporca e gelida. In vita cercarono solo il piacere materiale, ora sono ridotti a esistenze degradate. La loro voce è pesante, come il loro peccato.",
+        "avaro": "Cerchio 4 - Avari (Ecclesiastici anonimi)\n\nAccumularono ricchezze senza misura, perdendo se stessi nel possesso. Ora spingono pesi enormi in un moto inutile e senza fine. Il loro volto è irriconoscibile, cancellato dall'avidità.",
+        "prodigo": "Cerchio 4 - Prodighi (Gli Sperperatori Eterni)\n\nSprecarono tutto ciò che avevano senza valore né misura. Condannati a uno sforzo eterno, opposto ma ugualmente inutile agli avari. Nel vuoto delle loro azioni, hanno perso ogni identità.",
+        "iracondo": "Cerchio 5 - Iracondi (Filippo Argenti)\n\nConsumati dalla rabbia, si colpiscono senza tregua nella palude dello Stige. La furia che li dominava in vita non si è mai spenta. Sono prigionieri della loro stessa violenza.",
+        "accidioso": "Cerchio 5 - Accidiosi (I Sommersi dello Stige)\n\nImmersi nel fango, incapaci di reagire o parlare chiaramente. In vita furono passivi e spenti, ora esistono in un silenzio soffocante. La loro pena è un'eternità senza volontà.",
+        "eretico": "Cerchio 6 - Eretici (Farinata degli Uberti)\n\nRinchiusi in tombe infuocate, puniti per aver negato verità eterne. Mantengono però la loro fierezza e identità. La loro mente arde, come le idee che difesero.",
+        "violenza_altri": "Cerchio 7 - Violenti contro il prossimo (Attila)\n\nImmersi in un fiume di sangue bollente, simbolo della violenza inflitta agli altri. Più grave il crimine, più profonda la condanna. La loro brutalità è diventata la loro prigione.",
+        "violenza_se": "Cerchio 7 - Violenti contro se stessi (Pier della Vigna)\n\nTrasformati in alberi contorti, privati del proprio corpo. Solo attraverso il dolore possono parlare. La loro disperazione ha messo radici eterne.",
+        "violenza_dio": "Cerchio 7 - Violenti contro Dio/natura (Brunetto Latini)\n\nCamminano sotto una pioggia di fuoco su un deserto sterile. Sfidarono l'ordine naturale e divino, e ora vivono in un mondo senza vita. La loro colpa è eterna sterilità.",
+        "fraudolento": "Cerchio 8 - Fraudolenti (I Millevolti)\n\nColoro che usarono l'inganno contro chi si fidava di loro. Sono divisi in dieci bolge e puniti secondo il tipo di frode commessa, riflettendo la corruzione dell'intelligenza umana.",
+        "traditore": "Cerchio 9 - Traditori (Lucifero)\n\nImmerso nel ghiaccio, domina il regno del tradimento. Le sue ali gelano tutto ciò che lo circonda. È il simbolo ultimo della fiducia spezzata e della caduta definitiva.",
+        "leone": "Bestia alleata - Leone\n\nCompagno feroce e stabile, specializzato nel controllo del ritmo di battaglia e nella pressione costante.",
+        "lonza": "Bestia alleata - Lonza\n\nCombattente rapido e opportunista, punta a colpi improvvisi e ad aperture tattiche.",
+        "lupa": "Bestia alleata - Lupa\n\nPredatrice resistente e aggressiva, adatta a duelli lunghi con pressione continua."
+    },
+    "en": {
+        "limbo": "Circle 1 - Virtuous pagans (Achilles)\n\nPagan and valiant souls, yet without Christian faith. They suffer no physical torture, but live in eternal longing without hope. Their greatness is dimmed by an unfinished destiny.",
+        "lussurioso": "Circle 2 - Lustful (Paolo Malatesta and Francesca da Rimini)\n\nSwept by an endless storm, symbol of passions that ruled them in life. Their love is eternal, yet condemned to never find peace. Desire and torment become one.",
+        "goloso": "Circle 3 - Gluttons (Ciacco)\n\nSubmerged in mud beneath filthy freezing rain. In life they sought only material pleasure, now reduced to degraded existence. Their voice is heavy like their sin.",
+        "avaro": "Circle 4 - Avaricious (Anonymous Clerics)\n\nThey hoarded wealth without measure, losing themselves in possession. Now they push enormous weights in a useless endless motion. Their faces are erased by greed.",
+        "prodigo": "Circle 4 - Prodigal (The Eternal Wasters)\n\nThey wasted everything without value or measure. Condemned to eternal effort, opposite yet equally pointless to the avaricious. In the void of their actions, identity is lost.",
+        "iracondo": "Circle 5 - Wrathful (Filippo Argenti)\n\nConsumed by rage, they strike each other without pause in the Styx marsh. The fury that ruled their lives never faded. They are prisoners of their own violence.",
+        "accidioso": "Circle 5 - Sullen (The Submerged of Styx)\n\nBuried in sludge, unable to react or speak clearly. In life they were passive and dim; now they exist in suffocating silence. Their punishment is eternity without will.",
+        "eretico": "Circle 6 - Heretics (Farinata degli Uberti)\n\nLocked in burning tombs, punished for denying eternal truths. Yet they keep their pride and identity. Their minds burn like the ideas they defended.",
+        "violenza_altri": "Circle 7 - Violent against others (Attila)\n\nImmersed in a river of boiling blood, symbol of violence inflicted on others. The graver the crime, the deeper the condemnation. Brutality became their prison.",
+        "violenza_se": "Circle 7 - Violent against self (Pier della Vigna)\n\nTransformed into twisted trees, deprived of their bodies. Only through pain can they speak. Their despair has taken eternal root.",
+        "violenza_dio": "Circle 7 - Violent against God/Nature (Brunetto Latini)\n\nThey walk under rain of fire on a sterile desert. They defied divine and natural order, and now live in a lifeless world. Their guilt is eternal sterility.",
+        "fraudolento": "Circle 8 - Fraudulent (The Thousand-Faced)\n\nThose who used deception against trust. They are divided into ten bolge and punished by the specific fraud committed, reflecting the corruption of human intellect.",
+        "traditore": "Circle 9 - Traitors (Lucifer)\n\nImmersed in ice, he rules the realm of betrayal. His wings freeze all around him. He is the ultimate symbol of broken trust and final downfall.",
+        "leone": "Ally Beast - Lion\n\nA fierce and steady companion focused on controlling tempo and applying constant pressure.",
+        "lonza": "Ally Beast - Leopard\n\nA fast and opportunistic fighter, built around sudden strikes and tactical openings.",
+        "lupa": "Ally Beast - Wolf\n\nA resilient and aggressive predator suited for long duels and relentless pressure."
+    }
+}

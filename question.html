@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+
+<!-- Commento generale file: struttura principale della pagina. -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno di Dante</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="css/bestiario.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/png" href="assets/img/oggetti/favicon.png">
+    <script src="js/gameCore.js" defer></script>
+    <script src="js/lingua.js" defer></script>
+    <script src="js/bestiario.js" defer></script>
+    <script src="js/musicManager.js" defer></script>
+</head>
+<body class="stage-cyan">
+    <div id="flame-left" class="flame-edge"></div>
+    <div id="flame-right" class="flame-edge"></div>
+
+    <main id="quiz-screen">
+        <header class="quiz-header">
+            <h1 data-i18n="question_title">Sfida a Domande</h1>
+            <p id="progress" data-i18n="question_progress_default">Domanda 1 / 3</p>
+            <p id="score" data-i18n="question_score_default">Corrette: 0</p>
+            <p id="tensione-indicatore">Tensione: BASSA</p>
+            <p id="countdown-indicatore" class="hidden">Tempo: 15</p>
+            <button id="btn-bestiario-q" class="bestiario-btn">Bestiario</button>
+        </header>
+
+        <section class="question-card">
+            <p id="question-text" data-i18n="question_loading">Loading...</p>
+            <div class="options" id="option-list"></div>
+            <div class="helpers">
+                <button id="btn-translate" data-i18n="question_btn_translate">Traduci in italiano</button>
+                <button id="btn-hint" data-i18n="question_btn_hint">Hint</button>
+            </div>
+            <p id="helper-text"></p>
+        </section>
+
+        <section class="result-card hidden" id="result-card">
+            <h2 id="result-title"></h2>
+            <p id="result-score" class="result-score"></p>
+            <p id="result-detail"></p>
+            <div class="helpers hidden" id="recruit-actions">
+                <button data-recruit="yes" data-i18n="question_recruit_yes">Aggiungi alla squadra</button>
+                <button data-recruit="no" data-i18n="question_recruit_no">Lascia andare</button>
+            </div>
+            <button id="btn-return" data-i18n="question_return_portal">Torna al portale</button>
+        </section>
+
+        <section id="watchers">
+            <figure class="watcher">
+                <img id="watcher-dante" src="assets/img/personaggi/dante_spritesheet/Dante_idle_frames/frame_000.png" alt="Dante">
+                <figcaption>Dante</figcaption>
+            </figure>
+            <figure class="watcher">
+                <img id="watcher-virgilio" src="assets/img/personaggi/virgilio_spritesheet/Virgilio_idle_frames/frame_000.png" alt="Virgilio">
+                <figcaption>Virgilio</figcaption>
+            </figure>
+            <figure class="watcher">
+                <img id="watcher-ally" src="assets/img/bestie/leone_idle_frames/frame_000.png" alt="Dannato alleato">
+                <figcaption data-i18n="question_watcher_ally">Alleato</figcaption>
+            </figure>
+            <figure class="watcher">
+                <img id="watcher-enemy" src="assets/img/dannati/dannato_girone1_idle_frames/frame_000.png" alt="Dannato nemico">
+                <figcaption data-i18n="question_watcher_enemy">Nemico</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <!-- Overlay cinematografico per scandire il passaggio tra domande e risultato finale. -->
+    <div id="judgement-overlay" class="judgement-overlay hidden">
+        <p id="judgement-text">GIUDIZIO...</p>
+    </div>
+
+    <!-- Popup cambio dannato quando il compagno corrente viene sconfitto nel quiz. -->
+    <div id="reserve-modal" class="reserve-modal hidden">
+        <div class="reserve-card">
+            <h3 data-i18n="question_reserve_title">Il tuo dannato e stato sconfitto</h3>
+            <p data-i18n="question_reserve_subtitle">Scegli un dannato dalla riserva per continuare il viaggio:</p>
+            <div id="reserve-list" class="reserve-list"></div>
+        </div>
+    </div>
+    <!-- Overlay di game over mostrato quando non restano dannati disponibili. -->
+    <div id="gameover-overlay" class="gameover-overlay hidden">
+        <p class="gameover-text">GAME OVER</p>
+    </div>
+    
+    <div id="bestiario-modal" class="bestiario-modal hidden">
+        <div class="bestiario-card">
+            <div class="bestiario-head">
+                <h2 id="bestiario-title">Bestiario</h2>
+                <div class="bestiario-index" id="bestiario-index">1 / 16</div>
+                <button id="bestiario-close" class="bestiario-close" type="button">X</button>
+            </div>
+            <div class="bestiario-body">
+                <div class="bestiario-image-wrap">
+                    <img id="bestiario-image" src="assets/img/bestie/leone_idle_frames/frame_000.png" alt="Bestiario">
+                </div>
+                <div class="bestiario-info">
+                    <p id="bestiario-nome"></p>
+                    <p id="bestiario-tipo"></p>
+                    <p id="bestiario-hp"></p>
+                    <p id="bestiario-atk"></p>
+                    <p id="bestiario-special-name"></p>
+                    <p id="bestiario-special-damage"></p>
+                    <p id="bestiario-special-desc"></p>
+                    <p id="bestiario-passive-name"></p>
+                    <p id="bestiario-passive-desc"></p>
+                </div>
+            </div>
+            <div class="bestiario-controls"><button id="bestiario-prev" type="button"><</button><button id="bestiario-next" type="button">></button></div>
+        </div>
+    </div>
+    <script src="js/question.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

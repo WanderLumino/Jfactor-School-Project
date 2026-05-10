@@ -1,0 +1,14 @@
+﻿{
+    "it": {
+        "hudPrefix": "INFERNO - CERCHIO",
+        "chooseTrial": "Scegli la prova: combattimento o domande",
+        "encounterError": "Errore incontro",
+        "finalDuelToast": "Duello finale: Satana ti attende."
+    },
+    "en": {
+        "hudPrefix": "INFERNO - CIRCLE",
+        "chooseTrial": "Choose your trial: battle or questions",
+        "encounterError": "Encounter error",
+        "finalDuelToast": "Final duel: Satan awaits."
+    }
+}

@@ -1,0 +1,485 @@
+﻿/* Commento generale file: stili principali dell'interfaccia. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "VCR OSD Mono", monospace;
+    background: #000;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    color: #f5deb3;
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#scene-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
+    z-index: 0;
+}
+
+#hud {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.72);
+    border: 2px solid #8b4513;
+    border-radius: 12px;
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 210px;
+}
+
+#hud-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #8f7c63;
+}
+
+#hud-cerchio {
+    font-size: 27px;
+    line-height: 1;
+    color: #ff8800;
+    text-shadow: 0 0 10px rgba(255, 120, 0, 0.9);
+}
+
+#hud-nome {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#titolo {
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(28px, 4.4vw, 58px);
+    letter-spacing: 4px;
+    color: #f5deb3;
+    text-shadow: 0 0 20px rgba(255, 120, 0, 0.5), 3px 3px #000;
+    z-index: 10;
+}
+
+#cartiglio {
+    position: fixed;
+    top: 26%;
+    right: 3%;
+    z-index: 10;
+    background: linear-gradient(135deg, #d4a855 0%, #8b6914 100%);
+    color: #1a0a00;
+    font-size: clamp(9px, 1.2vw, 15px);
+    line-height: 1.8;
+    padding: 16px 14px;
+    width: clamp(90px, 12vw, 150px);
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #5a3a00;
+    border-radius: 4px;
+    box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.7);
+}
+
+#dante-sprite,
+#virgilio-sprite {
+    position: fixed;
+    bottom: 5%;
+    height: clamp(76px, 14vh, 150px);
+    image-rendering: pixelated;
+    z-index: 10;
+}
+
+#dante-sprite {
+    left: 40%;
+}
+
+#virgilio-sprite {
+    right: 40%;
+}
+
+#btn-porta {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(110px, 18vw, 280px);
+    height: clamp(220px, 52vh, 560px);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#btn-porta::after {
+    content: attr(data-open-label);
+    position: absolute;
+    bottom: 50%;
+    left: 42%;
+    transform: translateX(-50%);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #1a0700;
+    text-shadow: 0 0 6px rgba(255, 190, 120, 0.2), 0 0 14px #000;
+    opacity: 1;
+    animation: porta-label-blink 0.9s ease-in-out infinite;
+    white-space: nowrap;
+}
+
+#btn-porta.spinning::after {
+    content: attr(data-stop-label);
+    opacity: 1;
+}
+
+#slot-container {
+    position: fixed;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    pointer-events: none;
+}
+
+#slot-frame {
+    position: relative;
+    width: min(82vw, 420px);
+    height: min(66vh, 300px);
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.88);
+    border: 2px solid #8b4513;
+    box-shadow: 0 0 0 1px #3a1a00, 0 0 40px rgba(200, 80, 0, 0.5), inset 0 0 30px rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+}
+
+#slot-track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+}
+
+.slot-item {
+    width: 100%;
+    height: 140px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #2a1000;
+}
+
+.slot-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 140, 65, 0.5);
+    border-radius: 8px;
+}
+
+.slot-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.slot-num {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ff8800;
+    text-shadow: 0 0 10px rgba(255, 130, 0, 0.9);
+}
+
+.slot-nome {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.slot-peccato {
+    font-size: 10px;
+    color: #9a7d59;
+}
+
+#slot-line-top,
+#slot-line-bot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6600, #ffaa00, #ff6600, transparent);
+}
+
+#slot-line-top {
+    top: calc(50% - 70px);
+}
+
+#slot-line-bot {
+    top: calc(50% + 70px);
+}
+
+#slot-hint {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #ffe0b6;
+    text-shadow: 0 0 10px rgba(255, 120, 0, 0.9), 0 0 16px rgba(255, 70, 0, 0.45);
+}
+
+#slot-hint.is-blink {
+    animation: porta-hint-blink 0.75s ease-in-out infinite;
+}
+
+#slot-range {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #ffd7a2;
+    text-shadow: 0 0 8px rgba(255, 120, 0, 0.45);
+}
+
+@media (max-width: 900px) {
+    #cartiglio {
+        display: none;
+    }
+
+    #dante-sprite {
+        left: 8%;
+    }
+
+    #virgilio-sprite {
+        right: 8%;
+    }
+
+    .slot-item {
+        grid-template-columns: 90px 1fr;
+        height: 120px;
+    }
+}
+
+
+@keyframes porta-label-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+
+@keyframes porta-hint-blink {
+    0%, 100% { opacity: 1; transform: translateY(0); }
+    50% { opacity: 0.45; transform: translateY(-1px); }
+}
+
+
+/* UI economia: HUD monete e modal negozio. */
+#coin-hud {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.72);
+    border: 2px solid #8b4513;
+    border-radius: 12px;
+    padding: 10px 14px;
+}
+
+#coin-hud img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+#coin-count {
+    color: #ffcf86;
+    font-size: 20px;
+}
+
+#btn-shop {
+    position: fixed;
+    top: 74px;
+    right: 16px;
+    z-index: 60;
+    border: 2px solid #6e3f1c;
+    background: rgba(34, 15, 5, 0.94);
+    color: #ffd9aa;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-family: "VCR OSD Mono", monospace;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#shop-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.74);
+    backdrop-filter: blur(4px);
+    padding: 14px;
+}
+
+#shop-modal.hidden {
+    display: none !important;
+}
+
+.shop-card {
+    position: relative;
+    width: min(78vw, 680px);
+    max-height: 88vh;
+    overflow: auto;
+    border: 2px solid #8f7554;
+    border-radius: 14px;
+    background: rgba(214, 191, 158, 0.98);
+    color: #1f1710;
+    padding: 16px;
+}
+
+#shop-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #7f5730;
+    border-radius: 8px;
+    background: #f4e3bf;
+    color: #261509;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    z-index: 4;
+}
+
+.shop-list {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 12px;
+}
+
+.shop-item {
+    border: 1px solid #8b6f4f;
+    border-radius: 12px;
+    background: rgba(250, 243, 230, 0.96);
+    padding: 10px;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.shop-item img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.shop-item h4 {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.shop-item p {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.shop-cost {
+    color: #7d3f14;
+    font-weight: 700;
+}
+
+.shop-item .shop-owned {
+    margin-top: 2px;
+    font-size: 11px;
+    color: #5f4023;
+}
+
+.shop-item button {
+    margin-top: 8px;
+    width: 100%;
+    border: 1px solid #7f5730;
+    border-radius: 8px;
+    background: #f4e3bf;
+    color: #2a180b;
+    padding: 7px 8px;
+    cursor: pointer;
+    font-family: "VCR OSD Mono", monospace;
+    transition: transform .14s ease, background .14s ease, color .14s ease, border-color .14s ease;
+}
+
+.shop-item:hover {
+    transform: translateY(-2px);
+    border-color: #a86e36;
+    box-shadow: 0 8px 18px rgba(53, 27, 10, 0.25);
+}
+
+.shop-item button:hover:not(:disabled) {
+    background: #2f190a;
+    color: #f6ddb8;
+    border-color: #2f190a;
+    transform: translateY(-1px);
+}
+
+.shop-item button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.shop-item.is-bought {
+    border-color: #6f5d49;
+    background: rgba(230, 220, 205, 0.95);
+}
+
+.shop-item.is-bought button {
+    opacity: 0.78;
+    cursor: default;
+}
+
+.shop-refresh-btn {
+    display: block;
+    margin: 14px auto 0;
+    padding: 10px 24px;
+    background: #2a1409;
+    color: #f5dfbf;
+    border: 2px solid #8b6f4f;
+    border-radius: 8px;
+    font-family: "VCR OSD Mono", monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.18s, border-color 0.18s;
+}
+
+.shop-refresh-btn:hover:not(:disabled) {
+    background: #3d1f0f;
+    border-color: #a86e36;
+}
+
+.shop-refresh-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+
+
+
+

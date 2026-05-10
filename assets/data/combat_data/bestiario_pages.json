@@ -1,0 +1,370 @@
+[
+    {
+        "id": "leone",
+        "specie": "leone",
+        "image": "assets/img/bestie/leone_idle_frames/frame_000.png",
+        "atk": 16,
+        "specialDamage": 21,
+        "it": {
+            "nome": "Leone",
+            "tipo": "Starter",
+            "specialName": "Ruggito del Martirio",
+            "specialDesc": "Tipo: Potenziamento. Consuma il 10% HP attuale e aumenta del +90% il prossimo attacco.",
+            "passiveName": "Furia Predatoria",
+            "passiveDesc": "Ogni 25% HP persi guadagni +7% danno permanente."
+        },
+        "en": {
+            "nome": "Lion",
+            "tipo": "Starter",
+            "specialName": "Martyr Roar",
+            "specialDesc": "Type: Buff. Spend 10% current HP and increase next attack by +90%.",
+            "passiveName": "Predator Rage",
+            "passiveDesc": "Every 25% HP lost grants +7% permanent damage."
+        }
+    },
+    {
+        "id": "lonza",
+        "specie": "lonza",
+        "image": "assets/img/bestie/lonza_idle_frames/frame_000.png",
+        "atk": 16,
+        "specialDamage": 23,
+        "it": {
+            "nome": "Lonza",
+            "tipo": "Starter",
+            "specialName": "Fendente di Brama",
+            "specialDesc": "Tipo: Controllo. Infligge danno ridotto e drena 18 energia speciale al bersaglio.",
+            "passiveName": "Primo Morso",
+            "passiveDesc": "Il primo attacco della battaglia guadagna +16% danno."
+        },
+        "en": {
+            "nome": "Leopard",
+            "tipo": "Starter",
+            "specialName": "Lust Slash",
+            "specialDesc": "Type: Control. Reduced damage and drains 18 special energy from target.",
+            "passiveName": "First Bite",
+            "passiveDesc": "First attack in battle gains +16% damage."
+        }
+    },
+    {
+        "id": "lupa",
+        "specie": "lupa",
+        "image": "assets/img/bestie/lupa_idle_frames/frame_000.png",
+        "atk": 17,
+        "specialDamage": 24,
+        "it": {
+            "nome": "Lupa",
+            "tipo": "Starter",
+            "specialName": "Voracità Guardiana",
+            "specialDesc": "Tipo: Difesa. Ottieni 1 carica scudo (riduzione danno del prossimo colpo).",
+            "passiveName": "Fame Opportunista",
+            "passiveDesc": "Se il nemico scende sotto 35% HP, guadagni fino a 2 cariche scudo."
+        },
+        "en": {
+            "nome": "Wolf",
+            "tipo": "Starter",
+            "specialName": "Guardian Hunger",
+            "specialDesc": "Type: Defense. Gain 1 shield charge (damage reduction on next hit).",
+            "passiveName": "Opportunist Hunger",
+            "passiveDesc": "If enemy goes below 35% HP, gain up to 2 shield charges."
+        }
+    },
+    {
+        "id": "limbo",
+        "specie": "limbo",
+        "image": "assets/img/dannati/Cerchio_1/cerchio_1_pagano_idle_frames/frame_000.png",
+        "atk": 14,
+        "specialDamage": 18,
+        "it": {
+            "nome": "Achille",
+            "tipo": "Cerchio I",
+            "specialName": "Eco del Vuoto",
+            "specialDesc": "Tipo: Debuff. Riduce il danno nemico all'84% per 1 turno.",
+            "passiveName": "Pace Impossibile",
+            "passiveDesc": "A inizio turno recupera 2.5% HP massimi."
+        },
+        "en": {
+            "nome": "Achilles",
+            "tipo": "Circle I",
+            "specialName": "Void Echo",
+            "specialDesc": "Type: Debuff. Reduces enemy damage to 84% for 1 turn.",
+            "passiveName": "Impossible Peace",
+            "passiveDesc": "At turn start, restores 2.5% max HP."
+        }
+    },
+    {
+        "id": "lussurioso",
+        "specie": "lussurioso",
+        "image": "assets/img/dannati/Cerchio_2/cerchio_2__lussurioso_idle_frames/frame_000.png",
+        "atk": 15,
+        "specialDamage": 20,
+        "it": {
+            "nome": "Paolo e Francesca",
+            "tipo": "Cerchio II",
+            "specialName": "Vento Seducente",
+            "specialDesc": "Tipo: Controllo. Charm: il bersaglio salta 1 turno.",
+            "passiveName": "Tempesta dei Desideri",
+            "passiveDesc": "Ogni colpo consecutivo guadagna +2% danno scalare."
+        },
+        "en": {
+            "nome": "Paolo and Francesca",
+            "tipo": "Circle II",
+            "specialName": "Seductive Gale",
+            "specialDesc": "Type: Control. Charm: target skips 1 turn.",
+            "passiveName": "Desire Storm",
+            "passiveDesc": "Each consecutive hit gains +2% scaling damage."
+        }
+    },
+    {
+        "id": "goloso",
+        "specie": "goloso",
+        "image": "assets/img/dannati/Cerchio_3/cerchio_3_goloso_idle_frames/frame_000.png",
+        "atk": 15,
+        "specialDamage": 20,
+        "it": {
+            "nome": "Ciacco",
+            "tipo": "Cerchio III",
+            "specialName": "Morsa Infinita",
+            "specialDesc": "Tipo: Vampirismo. Cura il 32% del danno inflitto.",
+            "passiveName": "Banchetto Finale",
+            "passiveDesc": "Contro nemici sotto 35% HP infligge +16% danno."
+        },
+        "en": {
+            "nome": "Ciacco",
+            "tipo": "Circle III",
+            "specialName": "Endless Bite",
+            "specialDesc": "Type: Lifesteal. Heals 32% of dealt damage.",
+            "passiveName": "Final Feast",
+            "passiveDesc": "Deals +16% damage to enemies below 35% HP."
+        }
+    },
+    {
+        "id": "avaro",
+        "specie": "avaro",
+        "image": "assets/img/dannati/Cerchio_4/01_Avaro/cerchio_4_avaro_idle_frames/frame_000.png",
+        "atk": 17,
+        "specialDamage": 19,
+        "it": {
+            "nome": "Ecclesiastici anonimi",
+            "tipo": "Cerchio IV",
+            "specialName": "Peso del Possesso",
+            "specialDesc": "Tipo: Difesa. Ottiene 1 carica scudo.",
+            "passiveName": "Accumulo Ossessivo",
+            "passiveDesc": "Ogni carica scudo aumenta il danno del +10%."
+        },
+        "en": {
+            "nome": "Anonymous Clerics",
+            "tipo": "Circle IV",
+            "specialName": "Weight of Possession",
+            "specialDesc": "Type: Defense. Gain 1 shield charge.",
+            "passiveName": "Obsessive Hoard",
+            "passiveDesc": "Each shield charge increases damage by +10%."
+        }
+    },
+    {
+        "id": "prodigo",
+        "specie": "prodigo",
+        "image": "assets/img/dannati/Cerchio_4/02_Prodigo/cerchio_4_prodigo_idle_frames/frame_000.png",
+        "atk": 17,
+        "specialDamage": 20,
+        "it": {
+            "nome": "Gli Sperperatori Eterni",
+            "tipo": "Cerchio IV",
+            "specialName": "Sperpero Maledetto",
+            "specialDesc": "Tipo: Pestilenza. Accumula marchi; a 3 marchi esplode e infligge 24% HP max del bersaglio.",
+            "passiveName": "Debito Eterno",
+            "passiveDesc": "Ogni colpo ha 35% di applicare 1 marchio pestilente."
+        },
+        "en": {
+            "nome": "The Eternal Wasters",
+            "tipo": "Circle IV",
+            "specialName": "Cursed Waste",
+            "specialDesc": "Type: Plague. Stacks marks; at 3 marks bursts for 24% target max HP.",
+            "passiveName": "Eternal Debt",
+            "passiveDesc": "Each hit has 35% chance to apply 1 plague mark."
+        }
+    },
+    {
+        "id": "iracondo",
+        "specie": "iracondo",
+        "image": "assets/img/dannati/Cerchio_5/01_Iracondi/cerchio_5_iracondo_idle_frames/frame_000.png",
+        "atk": 18,
+        "specialDamage": 21,
+        "it": {
+            "nome": "Filippo Argenti",
+            "tipo": "Cerchio V",
+            "specialName": "Furia dello Stige",
+            "specialDesc": "Tipo: DOT. Applica sanguinamento per 2 turni (22% del danno base).",
+            "passiveName": "Rabbia Inarrestabile",
+            "passiveDesc": "Ogni 15% HP persi ottieni +4% danno permanente."
+        },
+        "en": {
+            "nome": "Filippo Argenti",
+            "tipo": "Circle V",
+            "specialName": "Styx Fury",
+            "specialDesc": "Type: DOT. Applies bleed for 2 turns (22% of base damage).",
+            "passiveName": "Unstoppable Anger",
+            "passiveDesc": "Every 15% HP lost grants +4% permanent damage."
+        }
+    },
+    {
+        "id": "accidioso",
+        "specie": "accidioso",
+        "image": "assets/img/dannati/Cerchio_5/02_Accidiosi/cerchio_5_accidioso_idle_frames/frame_000.png",
+        "atk": 19,
+        "specialDamage": 20,
+        "it": {
+            "nome": "I Sommersi dello Stige",
+            "tipo": "Cerchio V",
+            "specialName": "Inerzia Letale",
+            "specialDesc": "Tipo: Difesa evasiva. Ottiene 1 carica schivata.",
+            "passiveName": "Respiro Torbido",
+            "passiveDesc": "Quando subisce una speciale, cura il 10% HP massimi."
+        },
+        "en": {
+            "nome": "The Submerged of Styx",
+            "tipo": "Circle V",
+            "specialName": "Lethal Inertia",
+            "specialDesc": "Type: Evasion. Gains 1 dodge charge.",
+            "passiveName": "Muddy Breath",
+            "passiveDesc": "When hit by a special, heals 10% max HP."
+        }
+    },
+    {
+        "id": "eretico",
+        "specie": "eretico",
+        "image": "assets/img/dannati/Cerchio_6/cerchio_6_eretico_idle_frames/frame_000.png",
+        "atk": 24,
+        "specialDamage": 21,
+        "it": {
+            "nome": "Farinata degli Uberti",
+            "tipo": "Cerchio VI",
+            "specialName": "Fiamma Empia",
+            "specialDesc": "Tipo: DOT. Bruciatura 2 turni (18% del danno base, min 3).",
+            "passiveName": "Dogma Rovente",
+            "passiveDesc": "Se il nemico brucia, rigenera 4% HP massimi a turno."
+        },
+        "en": {
+            "nome": "Farinata degli Uberti",
+            "tipo": "Circle VI",
+            "specialName": "Impious Flame",
+            "specialDesc": "Type: DOT. Burn for 2 turns (18% base damage, min 3).",
+            "passiveName": "Burning Dogma",
+            "passiveDesc": "If enemy is burning, regenerate 4% max HP each turn."
+        }
+    },
+    {
+        "id": "violenza_altri",
+        "specie": "violenza_altri",
+        "image": "assets/img/dannati/Cerchio_7/01_violenza_contro_altri/cerchio_7_violenza_altri_idle_frames/frame_000.png",
+        "atk": 20,
+        "specialDamage": 22,
+        "it": {
+            "nome": "Attila",
+            "tipo": "Cerchio VII",
+            "specialName": "Colpo Bestiale",
+            "specialDesc": "Tipo: Vero danno. Il prossimo colpo ignora gli scudi.",
+            "passiveName": "Sangue Chiama Sangue",
+            "passiveDesc": "Quando subisce danno, guadagna +12 energia speciale."
+        },
+        "en": {
+            "nome": "Attila",
+            "tipo": "Circle VII",
+            "specialName": "Bestial Strike",
+            "specialDesc": "Type: True damage. Next strike ignores shields.",
+            "passiveName": "Blood Calls Blood",
+            "passiveDesc": "When taking damage, gains +12 special energy."
+        }
+    },
+    {
+        "id": "violenza_se",
+        "specie": "violenza_se",
+        "image": "assets/img/dannati/Cerchio_7/02_violenza_contro_se/cerchio_7_violenza_se_idle_frames/frame_000.png",
+        "atk": 21,
+        "specialDamage": 21,
+        "it": {
+            "nome": "Pier della Vigna",
+            "tipo": "Cerchio VII",
+            "specialName": "Ritorsione Spinale",
+            "specialDesc": "Tipo: Riflesso. 1 scudo + riflette 65% del danno subito nel prossimo impatto.",
+            "passiveName": "Scorza Dolente",
+            "passiveDesc": "A inizio turno ottiene almeno 1 carica scudo."
+        },
+        "en": {
+            "nome": "Pier della Vigna",
+            "tipo": "Circle VII",
+            "specialName": "Spinal Retaliation",
+            "specialDesc": "Type: Reflect. 1 shield + reflects 65% of received damage on next hit.",
+            "passiveName": "Pain Bark",
+            "passiveDesc": "At turn start, gains at least 1 shield charge."
+        }
+    },
+    {
+        "id": "violenza_dio",
+        "specie": "violenza_dio",
+        "image": "assets/img/dannati/Cerchio_7/03_violenza_contro_dio/cerchio_7_violenza_dio_idle_frames/frame_000.png",
+        "atk": 21,
+        "specialDamage": 23,
+        "it": {
+            "nome": "Brunetto Latini",
+            "tipo": "Cerchio VII",
+            "specialName": "Pioggia Profana",
+            "specialDesc": "Tipo: Invincibilità. Annulla i danni per 1 turno.",
+            "passiveName": "Empietà Tenace",
+            "passiveDesc": "Sotto 30% HP rimuove automaticamente i debuff principali."
+        },
+        "en": {
+            "nome": "Brunetto Latini",
+            "tipo": "Circle VII",
+            "specialName": "Profane Rain",
+            "specialDesc": "Type: Invincibility. Negates incoming damage for 1 turn.",
+            "passiveName": "Stubborn Impiety",
+            "passiveDesc": "Below 30% HP, automatically cleanses major debuffs."
+        }
+    },
+    {
+        "id": "fraudolento",
+        "specie": "fraudolento",
+        "image": "assets/img/dannati/Cerchio_8/cerchio_8_fraudolento_idle_frames/frame_000.png",
+        "atk": 22,
+        "specialDamage": 23,
+        "it": {
+            "nome": "I Millevolti",
+            "tipo": "Cerchio VIII",
+            "specialName": "Inganno Mortale",
+            "specialDesc": "Tipo: Dispel. Rimuove scudo/riflesso/evasione al bersaglio.",
+            "passiveName": "Maschera dei Dieci Inganni",
+            "passiveDesc": "Una volta a battaglia annulla tutti i debuff su di sé."
+        },
+        "en": {
+            "nome": "The Thousand-Faced",
+            "tipo": "Circle VIII",
+            "specialName": "Deadly Deceit",
+            "specialDesc": "Type: Dispel. Removes shield/reflect/dodge from target.",
+            "passiveName": "Mask of Ten Frauds",
+            "passiveDesc": "Once per battle, cleanses all debuffs from self."
+        }
+    },
+    {
+        "id": "traditore",
+        "specie": "traditore",
+        "image": "assets/img/dannati/Cerchio_9/cerchio_9_traditori_idle_frames/frame_000.png",
+        "atk": 19,
+        "specialDamage": 26,
+        "it": {
+            "nome": "Lucifero",
+            "tipo": "Boss Finale",
+            "specialName": "Gelo di Cocito",
+            "specialDesc": "Tipo: Boss combo. Congela 1 turno + sanguinamento 2 turni (28% danno, min 8).",
+            "passiveName": "Sovrano del Nono",
+            "passiveDesc": "Sotto 50% HP entra in Fase 2 e una volta recupera 20% HP massimi."
+        },
+        "en": {
+            "nome": "Lucifer",
+            "tipo": "Final Boss",
+            "specialName": "Cocytus Frost",
+            "specialDesc": "Type: Boss combo. Freeze 1 turn + bleed 2 turns (28% damage, min 8).",
+            "passiveName": "Lord of the Ninth",
+            "passiveDesc": "Below 50% HP enters Phase 2 and once heals 20% max HP."
+        }
+    }
+]

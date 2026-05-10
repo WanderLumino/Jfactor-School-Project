@@ -1,0 +1,174 @@
+﻿{
+    "intro": {
+        "canto": {
+            "it": "Canto I (Canto Primo)",
+            "en": "Canto I (First Canto)"
+        },
+        "lines": [
+            "Nel mezzo del cammin di nostra vita",
+            "mi ritrovai per una selva oscura,",
+            "ché la diritta via era smarrita.",
+            "",
+            "Ahi quanto a dir qual era è cosa dura",
+            "esta selva selvaggia e aspra e forte",
+            "che nel pensier rinova la paura!",
+            "",
+            "Tant’è amara che poco è più morte;",
+            "ma per trattar del ben ch’i’ vi trovai,",
+            "dirò de l’altre cose ch’i’ v’ho scorte."
+        ]
+    },
+    "antinferno": {
+        "canto": {
+            "it": "Canto III",
+            "en": "Canto III"
+        },
+        "lines": [
+            "Per me si va ne la città dolente.",
+            "Per me si va ne l'etterno dolore.",
+            "Per me si va tra la perduta gente."
+        ]
+    },
+    "cerchio_1": {
+        "canto": {
+            "it": "Canto IV",
+            "en": "Canto IV"
+        },
+        "lines": [
+            "Quivi, secondo che per ascoltare,",
+            "non avea pianto mai che di sospiri,",
+            "che l'aura etterna facevan tremare"
+        ]
+    },
+    "cerchio_2": {
+        "canto": {
+            "it": "Canto V",
+            "en": "Canto V"
+        },
+        "lines": [
+            "Amor, ch’a nullo amato amar perdona,",
+            "mi prese del costui piacer sì forte,",
+            "che, come vedi, ancor non m’abbandona",
+            "",
+            "Amor condusse noi ad una morte:",
+            "Caina attende chi a vita ci spense"
+        ]
+    },
+    "cerchio_3": {
+        "canto": {
+            "it": "Canto VI",
+            "en": "Canto VI"
+        },
+        "lines": [
+            "Grandine grossa, acqua tinta e neve",
+            "per l'aere tenebroso si riversa;",
+            "pute la terra che questo riceve"
+        ]
+    },
+    "cerchio_4": {
+        "canto": {
+            "it": "Canto VII",
+            "en": "Canto VII"
+        },
+        "lines": [
+            "Perché tieni? e perché burli?",
+            "così tornavan per lo cerchio tetro",
+            "da ogne mano a l'opposito punto"
+        ]
+    },
+    "cerchio_5": {
+        "canto": {
+            "it": "Canto VII",
+            "en": "Canto VII"
+        },
+        "lines": [
+            "Fitti nel limo dicon: Tristi fummo",
+            "ne l'aere dolce che dal sol s'allegra,",
+            "portando dentro accidïoso fummo;",
+            "",
+            "or ci attristiam ne la belletta negra.",
+            "Quest'inno si gorgoglian ne la strozza"
+        ]
+    },
+    "cerchio_6": {
+        "canto": {
+            "it": "Canto IX",
+            "en": "Canto IX"
+        },
+        "lines": [
+            "E io: Maestro, quai son quelle genti",
+            "che, seppellite dentro da quell'arche,",
+            "si fan sentir coi sospiri dolenti?",
+            "",
+            "Ed elli a me: Qui son li eresïarche",
+            "con lor seguaci, d'ogne setta, e molto",
+            "più che non credi son le tombe carche."
+        ]
+    },
+    "cerchio_7": {
+        "canto": {
+            "it": "Canti XII-XIV",
+            "en": "Cantos XII-XIV"
+        },
+        "lines": [
+            "Io vidi un’ampia fossa in arco torta,",
+            "come quella che tutto ’l piano abbraccia,",
+            "secondo ch’avea detto la mia scorta;",
+            "",
+            "Quivi le brutte Arpie lor nidi fanno,",
+            "che cacciar de le Strofade i Troiani",
+            "con tristo annunzio di futuro danno.",
+            "",
+            "Sovra tutto il sabbion, d’un cader lento,",
+            "piovean di foco dilatate falde,",
+            "come di neve in alpe sanza vento."
+        ]
+    },
+    "cerchio_8": {
+        "canto": {
+            "it": "Canto XXVI",
+            "en": "Canto XXVI"
+        },
+        "lines": [
+            "Considerate la vostra semenza:",
+            "fatti non foste a viver come bruti,",
+            "ma per seguir virtute e canoscenza"
+        ]
+    },
+    "cerchio_9": {
+        "canto": {
+            "it": "Canto XXXII",
+            "en": "Canto XXXII"
+        },
+        "lines": [
+            "S’io avessi le rime aspre e chiocce,",
+            "come si converrebbe al tristo buco",
+            "sovra ’l qual pontan tutte l’altre rocce,",
+            "",
+            "io premerei di mio concetto il suco",
+            "più pienamente; ma perch’io non l’abbo,",
+            "non sanza tema a dicer mi conduco;",
+            "",
+            "ché non è impresa da pigliare a gabbo",
+            "discriver fondo a tutto l’universo,",
+            "né da lingua che chiami mamma o babbo."
+        ]
+    },
+    "finale": {
+        "canto": {
+            "it": "Canto XXXIV",
+            "en": "Canto XXXIV"
+        },
+        "lines": [
+            "Lo duca e io per quel cammino ascoso",
+            "intrammo a ritornar nel chiaro mondo;",
+            "e sanza cura aver d’alcun riposo,",
+            "",
+            "salimmo sù, el primo e io secondo,",
+            "tanto ch’i’ vidi de le cose belle",
+            "che porta ’l ciel, per un pertugio tondo.",
+            "",
+            "E quindi uscimmo a riveder le stelle."
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<!-- Commento generale file: struttura principale della pagina. -->
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno di Dante</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ending.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="icon" type="image/png" href="assets/img/oggetti/favicon.png">
+    <script src="js/gameCore.js" defer></script>
+    <script src="js/lingua.js" defer></script>
+    <script src="js/musicManager.js" defer></script>
+    <script src="js/ending.js" defer></script>
+</head>
+<body>
+    <main class="ending-screen">
+        <h1 id="ending-title">Il Viaggio è Finito</h1>
+        <p id="ending-subtitle">Lucifero è stato sconfitto. Dante e Virgilio rivedono la luce.</p>
+
+        <section id="ending-team" class="ending-team">
+            <h3 id="ending-team-title">Team</h3>
+            <p id="ending-team-name"></p>
+            <p id="ending-team-members"></p>
+        </section>
+
+        <section id="ending-atti" class="ending-atti"></section>
+
+        <section class="credits-window" id="credits-window">
+            <div class="credits-track" id="credits-track"></div>
+        </section>
+
+        <div class="ending-actions">
+            <button id="ending-restart" disabled>Ricomincia</button>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+

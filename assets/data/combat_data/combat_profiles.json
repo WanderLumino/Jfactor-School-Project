@@ -1,0 +1,218 @@
+﻿{
+    "leone":  {
+                  "special":  {
+                                  "type":  "sacrifice_buff",
+                                  "hpCostRatio":  0.10,
+                                  "nextAttackMultiplier":  1.90
+                              },
+                  "passives":  [
+                                   {
+                                       "type":  "hp_loss_rage",
+                                       "thresholdStep":  0.25,
+                                       "bonusPerStep":  0.07
+                                   }
+                               ]
+              },
+    "lonza":  {
+                  "special":  {
+                                  "type":  "energy_drain",
+                                  "energyDrain":  18
+                              },
+                  "passives":  [
+                                   {
+                                       "type":  "reduce_enemy_special_damage",
+                                       "ratio":  0.82
+                                   },
+                                   {
+                                       "type":  "first_strike_bonus",
+                                       "ratio":  0.16
+                                   }
+                               ]
+              },
+    "lupa":  {
+                 "special":  {
+                                 "type":  "shield",
+                                 "shieldHits":  1
+                             },
+                 "passives":  [
+                                  {
+                                      "type":  "conditional_shield_boost",
+                                      "enemyHpThreshold":  0.35,
+                                      "shieldBonusHits":  2
+                                  }
+                              ]
+             },
+    "limbo":  {
+                  "special":  {
+                                  "type":  "weaken",
+                                  "turns":  1,
+                                  "ratio":  0.84
+                              },
+                  "passives":  [
+                                   {
+                                       "type":  "regen_every_turn",
+                                       "ratio":  0.025
+                                   }
+                               ]
+              },
+    "lussurioso":  {
+                       "special":  {
+                                       "type":  "charm",
+                                       "turns":  1
+                                   },
+                       "passives":  [
+                                        {
+                                            "type":  "combo_scaling",
+                                            "ratio":  0.10
+                                        }
+                                    ]
+                   },
+    "goloso":  {
+                   "special":  {
+                                   "type":  "lifesteal",
+                                   "healRatio":  0.32
+                               },
+                   "passives":  [
+                                    {
+                                        "type":  "execution_bonus_low_enemy",
+                                        "threshold":  0.35,
+                                        "ratio":  0.16
+                                    }
+                                ]
+               },
+    "avaro":  {
+                  "special":  {
+                                  "type":  "shield",
+                                  "shieldHits":  1
+                              },
+                  "passives":  [
+                                   {
+                                       "perShieldBonus":  0.1,
+                                       "type":  "shield_damage_scaling"
+                                   }
+                               ]
+              },
+    "prodigo":  {
+                    "special":  {
+                                    "type":  "plague_mark",
+                                    "maxMarks":  3,
+                                    "burstRatio":  0.24
+                                },
+                    "passives":  [
+                                     {
+                                         "type":  "plague_on_hit",
+                                         "chance":  0.35
+                                     }
+                                 ]
+                },
+    "iracondo":  {
+                     "special":  {
+                                     "type":  "bleed",
+                                     "turns":  2,
+                                     "ratio":  0.22
+                                 },
+                     "passives":  [
+                                      {
+                                          "type":  "hp_loss_rage",
+                                          "thresholdStep":  0.15,
+                                          "bonusPerStep":  0.04
+                                      }
+                                  ]
+                 },
+    "accidioso":  {
+                      "special":  {
+                                      "type":  "dodge",
+                                      "charges":  1
+                                  },
+                      "passives":  [
+                                       {
+                                           "type":  "heal_on_enemy_special",
+                                           "ratio":  0.15
+                                       }
+                                   ]
+                  },
+    "eretico":  {
+                    "special":  {
+                                    "type":  "burn",
+                                    "turns":  2,
+                                    "ratio":  0.18
+                                },
+                    "passives":  [
+                                     {
+                                         "type":  "regen_if_enemy_burn",
+                                         "ratio":  0.05
+                                     }
+                                 ]
+                },
+    "violenza_altri":  {
+                           "special":  {
+                                           "type":  "true_damage",
+                                           "charges":  1
+                                       },
+                           "passives":  [
+                                            {
+                                                "type":  "energy_on_damage_taken",
+                                                "amount":  12
+                                            }
+                                        ]
+                       },
+    "violenza_se":  {
+                        "special":  {
+                                        "type":  "reflect_shield",
+                                        "shieldHits":  1,
+                                        "reflectRatio":  0.65
+                                    },
+                        "passives":  [
+                                         {
+                                             "type":  "shield_each_turn",
+                                             "hits":  1
+                                         }
+                                     ]
+                    },
+    "violenza_dio":  {
+                         "special":  {
+                                         "type":  "invincible",
+                                         "turns":  1
+                                     },
+                         "passives":  [
+                                          {
+                                              "type":  "cleanse_if_low_hp",
+                                              "threshold":  0.30
+                                          }
+                                      ]
+                     },
+    "fraudolento":  {
+                        "special":  {
+                                        "type":  "chaos"
+                                    },
+                        "passives":  [
+                                         {
+                                             "type":  "debuff_immunity_once",
+                                             "value":  true
+                                         }
+                                     ]
+                    },
+    "traditore":  {
+                      "special":  {
+                                      "type":  "boss_combo",
+                                      "freezeTurns":  1,
+                                      "bleedTurns":  2,
+                                      "bleedRatio":  0.22,
+                                      "minBleed":  8
+                                  },
+                      "passives":  [
+                                       {
+                                           "ratio":  0.15,
+                                           "threshold":  0.5,
+                                           "type":  "heal_once_low_hp"
+                                       }
+                                   ],
+                      "boss":  {
+                                   "phase2HpBoostRatio":  0.20,
+                                   "phase2AtkMultiplier":  1.20,
+                                   "phase2MaxHpMultiplier":  1.20,
+                                   "phase2FreezeTurns":  1,
+                                   "phase2SpecialType":  "boss_combo"
+                               }
+                  }
+}

@@ -1,0 +1,78 @@
+﻿/* Font locale del progetto per evitare dipendenze esterne. */
+@font-face {
+    font-family: 'VCR OSD Mono';
+    src: url('../assets/data/font/VCR_OSD_MONO_1.001.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* Commento generale file: stili principali dell'interfaccia. */
+/* base.css - Stili globali del gioco */
+
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VCR OSD Mono", sans-serif;
+}
+
+/* Corpo principale */
+body {
+    /* Stile pixel */
+    background-color: #111;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Classi utili */
+.nascosto {
+    display: none !important;
+}
+
+/* SISTEMA TEMI - Modalita Scura e Modalita Chiara */
+
+/* Tema scuro (predefinito) */
+body.tema-scuro {
+    background-color: #111 !important;
+    color: #fff !important;
+}
+
+/* Tema chiaro */
+body.tema-chiaro {
+    background-color: #eee !important;
+    color: #000 !important;
+}
+
+/* Ombra del titolo per tema scuro */
+.tema-scuro .menu-header h1 {
+    text-shadow: 3px 3px #000;
+}
+
+/* Ombra del titolo per tema chiaro */
+.tema-chiaro .menu-header h1 {
+    text-shadow: 3px 3px #aaa;
+}
+
+/* Tema scuro - sfondo scuro semi-trasparente */
+body.tema-scuro .impostazioni-modal {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Tema chiaro - sfondo chiaro semi-trasparente */
+body.tema-chiaro .impostazioni-modal {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Tema scuro - contenitore scuro */
+body.tema-scuro .impostazioni-contenuto {
+    background-color: #222;
+    border: 3px solid #555;
+    color: #fff;
+}
+
+/* Tema chiaro - contenitore chiaro */
+body.tema-chiaro .impostazioni-contenuto {
+    background-color: #ffffff;
+    border: 3px solid #bbb;
+    color: #000;
+}

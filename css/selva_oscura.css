@@ -1,0 +1,302 @@
+/* Commento generale file: stili principali dell'interfaccia. */
+/* ============================================================
+    SELVA OSCURA 闁?CSS
+    ============================================================ */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: "VCR OSD Mono", sans-serif !important;
+
+}
+
+body {
+    position: fixed;
+    inset: 0;
+    overscroll-behavior: none;
+}
+
+#gameCanvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    background: #000;
+}
+
+/* ============================================================
+    DIALOG OVERLAY
+    ============================================================ */
+
+#dialog-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.4s ease both;
+}
+
+#dialog-overlay.nascosto {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ============================================================
+    DIALOG BOX
+    ============================================================ */
+
+.dialog-box {
+    background: radial-gradient(ellipse at top, #1a0500 0%, #0a0000 70%);
+    border: 2px solid #8b2000;
+    border-radius: 15px;
+    box-shadow:
+            0 0 0 4px #000,
+            0 0 60px rgba(255, 68, 0, 0.35),
+            inset 0 0 40px rgba(0, 0, 0, 0.5);
+    padding: 40px 50px 50px;
+    max-width: 860px;
+    width: 92vw;
+    animation: slideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ============================================================
+    HEADER DIALOG
+    ============================================================ */
+
+.dialog-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.dialog-virgilio-nome {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #cc7700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.dialog-titolo {
+    font-size: 22px;
+    color: #ffaa44;
+    letter-spacing: 3px;
+    text-shadow: 0 0 16px rgba(255, 100, 0, 0.6);
+    margin-bottom: 14px;
+}
+
+.dialog-sottotitolo {
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(255, 170, 100, 0.6);
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================
+    CARDS
+    ============================================================ */
+
+.dialog-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.dannato-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #5a1000;
+    border-radius: 10px;
+    padding: 20px 18px 24px;
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dannato-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(255, 80, 0, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.dannato-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: #ff4400;
+    box-shadow: 0 0 24px rgba(255, 68, 0, 0.4), 0 0 0 2px #000;
+}
+
+.card-img-box {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid #3a0a00;
+    border-radius: 10px;
+
+}
+
+.card-img-box img {
+    max-width: 100%;
+    max-height: 100%;
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.card-nome {
+    font-size: 18px;
+    color: #ffaa44;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 100, 0, 0.5);
+}
+
+.card-stats {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.stat {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.stat.hp  { color: #ff6666; }
+.stat.atk { color: #ffcc44; }
+
+.card-skill {
+    font-size: 11px;
+    color: #cc8833;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    font-size: 11px;
+    color: rgba(255, 170, 100, 0.5);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* ============================================================
+    SCHERMATA DI CONFERMA
+    ============================================================ */
+
+.dialog-conferma {
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeIn 0.3s ease both;
+}
+
+.conferma-img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px rgba(255, 100, 0, 0.6));
+}
+
+.conferma-titolo {
+    font-size: 24px;
+    color: #ffaa44;
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px #ff4400;
+    margin-bottom: 14px;
+}
+
+.conferma-desc {
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(255, 170, 100, 0.7);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.conferma-stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 28px;
+    font-size: 14px;
+    color: #ffcc66;
+    letter-spacing: 2px;
+}
+
+.conferma-attesa {
+    font-size: 13px;
+    color: rgba(255, 130, 50, 0.5);
+    letter-spacing: 2px;
+    animation: lampeggio 1.2s steps(1, end) infinite;
+}
+
+@keyframes lampeggio {
+    0%, 49%  { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* /* ============================================================
+    STAGE TITLE
+    ============================================================ */
+
+#stage-title {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-size: 28px;
+    letter-spacing: 6px;
+    color: #ffffff;
+
+    text-shadow:
+            0 0 6px rgba(255,255,255,0.8),
+            0 0 12px rgba(255,255,255,0.6);
+
+    z-index: 50;
+    pointer-events: none;
+
+    animation: stageIntro 4s ease forwards;
+}
+
+@keyframes stageIntro {
+    0%   { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+
+    10%  { opacity: 1; }
+
+    20%  { opacity: 0.4; }
+    30%  { opacity: 1; }
+    40%  { opacity: 0.5; }
+    50%  { opacity: 1; }
+
+    70%  { opacity: 1; }
+
+    100% { opacity: 0; }
+}

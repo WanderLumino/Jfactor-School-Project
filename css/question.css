@@ -1,0 +1,542 @@
+﻿/* Commento generale file: stili principali dell'interfaccia. */
+:root {
+    --bg: #071822;
+    --panel: rgba(7, 25, 36, 0.9);
+    --line: #2f8ea8;
+    --option-bg: #0f3443;
+    --option-line: #1f5f74;
+    --text: #deeff8;
+    --accent: #66d8ff;
+    --ok: #5acb7b;
+    --bad: #de5d5d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "VCR OSD Mono", monospace;
+    color: var(--text);
+    overflow: hidden;
+}
+
+body {
+    transition: background .3s ease;
+}
+
+body.stage-cyan {
+    --panel: rgba(7, 25, 36, 0.9);
+    --line: #2f8ea8;
+    --option-bg: #0f3443;
+    --option-line: #1f5f74;
+    background:
+        radial-gradient(circle at 85% 10%, rgba(102, 216, 255, 0.2), transparent 40%),
+        radial-gradient(circle at 15% 80%, rgba(90, 203, 123, 0.1), transparent 45%),
+        #071822;
+}
+
+body.stage-orange {
+    --panel: rgba(54, 24, 7, 0.92);
+    --line: #b46a2f;
+    --option-bg: #5a280e;
+    --option-line: #a25d2f;
+    background:
+        radial-gradient(circle at 85% 10%, rgba(255, 176, 88, 0.28), transparent 40%),
+        radial-gradient(circle at 15% 80%, rgba(255, 105, 44, 0.15), transparent 45%),
+        #271005;
+}
+
+body.stage-red {
+    --panel: rgba(57, 9, 8, 0.94);
+    --line: #bc3c34;
+    --option-bg: #5b1311;
+    --option-line: #a42d27;
+    background:
+        radial-gradient(circle at 85% 10%, rgba(255, 98, 86, 0.35), transparent 40%),
+        radial-gradient(circle at 15% 80%, rgba(255, 62, 0, 0.2), transparent 45%),
+        #2a0503;
+}
+
+/* Leggera vibrazione nella fase critica finale. */
+body.stage-critical #quiz-screen {
+    animation: quiz-shake .42s linear infinite;
+}
+
+body.quiz-ended #quiz-screen {
+    animation: none !important;
+}
+
+.flame-edge {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: min(14vw, 180px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+    z-index: 1;
+}
+
+#flame-left {
+    left: 0;
+    background:
+        radial-gradient(ellipse at left center, rgba(255, 184, 106, 0.55) 0%, rgba(255, 88, 0, 0.18) 48%, transparent 72%);
+}
+
+#flame-right {
+    right: 0;
+    background:
+        radial-gradient(ellipse at right center, rgba(255, 184, 106, 0.55) 0%, rgba(255, 88, 0, 0.18) 48%, transparent 72%);
+}
+
+body.flame-medium .flame-edge {
+    opacity: .35;
+}
+
+body.flame-strong .flame-edge {
+    opacity: .8;
+}
+
+#quiz-screen {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    gap: 14px;
+    padding: clamp(14px, 2.3vw, 32px);
+}
+
+.quiz-header,
+.question-card,
+.result-card {
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    background: var(--panel);
+    padding: clamp(12px, 1.8vw, 20px);
+}
+
+.quiz-header h1 {
+    margin: 0;
+    font-size: clamp(20px, 2.2vw, 30px);
+}
+
+.quiz-header p {
+    margin: 8px 0 0;
+}
+
+#tensione-indicatore {
+    margin-top: 10px;
+    font-size: clamp(10px, 1vw, 13px);
+    opacity: .9;
+    letter-spacing: .08em;
+}
+
+#countdown-indicatore {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 180, 130, 0.65);
+    background: rgba(27, 8, 5, 0.58);
+    font-size: clamp(15px, 1.55vw, 22px);
+    font-weight: 700;
+    color: #ffdcb1;
+    letter-spacing: .06em;
+    text-shadow: 0 0 10px rgba(255, 140, 88, 0.35);
+}
+
+body.stage-critical #countdown-indicatore {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 180, 130, 0.65);
+    background: rgba(27, 8, 5, 0.58);
+    font-size: clamp(15px, 1.55vw, 22px);
+    font-weight: 700;
+    color: #ffdcb1;
+    letter-spacing: .06em;
+    text-shadow: 0 0 10px rgba(255, 140, 88, 0.35);
+}
+
+#question-text {
+    margin: 0;
+    font-size: clamp(15px, 1.8vw, 22px);
+    line-height: 1.45;
+}
+
+.options {
+    margin-top: 16px;
+    display: grid;
+    gap: 10px;
+}
+
+.options button,
+.helpers button,
+#btn-return {
+    border: 2px solid var(--option-line);
+    background: var(--option-bg);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.options button:hover:not(:disabled),
+.helpers button:hover:not(:disabled),
+#btn-return:hover {
+    border-color: var(--accent);
+}
+
+.options button.correct {
+    border-color: var(--ok);
+    background: rgba(90, 203, 123, 0.2);
+}
+
+.options button.wrong {
+    border-color: var(--bad);
+    background: rgba(222, 93, 93, 0.2);
+}
+
+.helpers {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#helper-text {
+    min-height: 1.4em;
+    margin: 12px 0 0;
+    color: var(--accent);
+}
+
+#watchers {
+    align-self: stretch;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(70px, 1fr));
+    gap: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px;
+}
+
+.watcher {
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 5px;
+    min-height: 100%;
+    padding: 8px 4px;
+}
+
+.watcher img {
+    width: clamp(48px, 7vw, 98px);
+    height: clamp(48px, 7vw, 98px);
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.watcher figcaption {
+    font-size: clamp(9px, 1vw, 12px);
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#btn-return {
+    margin-top: 12px;
+}
+
+/* Overlay di suspense tra domanda e risposta finale. */
+.judgement-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.judgement-overlay.hidden {
+    display: none;
+}
+
+#judgement-text {
+    margin: 0;
+    font-size: clamp(30px, 5vw, 76px);
+    color: #ffd39a;
+    letter-spacing: .15em;
+    text-shadow: 0 0 24px rgba(255, 118, 52, 0.45);
+    text-align: center;
+}
+
+.reserve-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.72);
+    padding: 16px;
+}
+
+.reserve-modal.hidden {
+    display: none;
+}
+
+.reserve-card {
+    width: min(92vw, 620px);
+    border: 2px solid var(--line);
+    border-radius: 12px;
+    background: var(--panel);
+    padding: 16px;
+}
+
+.reserve-card h3 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(18px, 2.1vw, 28px);
+}
+
+.reserve-card p {
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.reserve-list {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.reserve-btn {
+    border: 2px solid var(--option-line);
+    background: var(--option-bg);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.reserve-btn img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.reserve-btn:hover {
+    border-color: var(--accent);
+}
+
+@keyframes quiz-shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(0.2px, -0.2px); }
+    50% { transform: translate(-0.2px, 0.2px); }
+    75% { transform: translate(0.25px, 0.1px); }
+    100% { transform: translate(0, 0); }
+}
+
+@media (max-width: 900px) {
+    #watchers {
+        grid-template-columns: repeat(2, minmax(90px, 1fr));
+    }
+}
+
+.gameover-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.86);
+}
+
+.gameover-overlay.hidden {
+    display: none;
+}
+
+.gameover-text {
+    margin: 0;
+    font-size: clamp(48px, 12vw, 170px);
+    letter-spacing: .15em;
+    color: #ff695d;
+    text-shadow: 0 0 26px rgba(255, 74, 49, 0.6);
+}
+
+.bestiario-btn {
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 2px solid rgba(255, 180, 130, 0.65);
+    background: rgba(27, 8, 5, 0.58);
+    color: #ffdcb1;
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: clamp(15px, 1.55vw, 22px);
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-shadow: 0 0 10px rgba(255, 140, 88, 0.35);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* Tema pergamena condiviso: popup question (riserva e game over). */
+.reserve-card {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 16% 14%, rgba(255, 247, 222, 0.58), rgba(255, 247, 222, 0) 36%),
+        radial-gradient(circle at 84% 86%, rgba(101, 64, 31, 0.24), rgba(101, 64, 31, 0) 44%),
+        repeating-linear-gradient(-10deg, rgba(74, 47, 22, 0.06) 0px, rgba(74, 47, 22, 0.06) 2px, rgba(230, 208, 172, 0) 2px, rgba(230, 208, 172, 0) 10px),
+        linear-gradient(160deg, #f1deb9 0%, #dcc08f 54%, #c79e66 100%);
+    border: 2px solid rgba(56, 31, 12, 0.92);
+    outline: 1px solid rgba(255, 232, 190, 0.62);
+    outline-offset: -8px;
+    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.42), inset 0 0 0 2px rgba(90, 57, 24, 0.30);
+}
+
+.reserve-card::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1.5px dashed rgba(72, 43, 20, 0.42);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.reserve-card h3,
+.reserve-card p,
+.reserve-btn {
+    color: #2a190b;
+    text-shadow: none;
+}
+
+.reserve-btn {
+    background: rgba(255, 244, 220, 0.66);
+    border-color: #74512f;
+}
+
+.gameover-overlay,
+.judgement-overlay {
+    background:
+        radial-gradient(circle at 20% 18%, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0) 42%),
+        rgba(0, 0, 0, 0.82);
+}
+
+.result-card {
+    border-width: 3px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 211, 160, 0.22);
+}
+
+.result-card #result-title {
+    margin: 0;
+    font-size: clamp(28px, 3.4vw, 48px);
+    letter-spacing: 0.05em;
+    color: #ffd7a8;
+    text-shadow: 0 0 14px rgba(255, 124, 48, 0.35);
+}
+
+.result-score {
+    margin: 10px 0 6px;
+    font-size: clamp(16px, 1.9vw, 26px);
+    font-weight: 700;
+    color: #ffefcf;
+    letter-spacing: 0.04em;
+}
+
+#result-detail {
+    margin: 0;
+    font-size: clamp(14px, 1.4vw, 20px);
+    line-height: 1.5;
+    color: #ffe8c8;
+}
+
+.result-card .helpers {
+    margin-top: 16px;
+}
+
+.result-card .helpers button,
+.result-card #btn-return {
+    min-height: 50px;
+    font-size: clamp(14px, 1.35vw, 20px);
+    font-weight: 700;
+}
+
+
+
+
+/* 小气泡提示区（question页） */
+#question-toast-root {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 45;
+}
+
+.q-toast {
+    position: fixed;
+    min-width: 120px;
+    max-width: 280px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 2px solid rgba(120, 78, 43, 0.88);
+    background: rgba(241, 226, 195, 0.96);
+    color: #2f1e12;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.35;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.26);
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+    transition: opacity .24s ease, transform .24s ease;
+}
+
+.q-toast.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.q-toast.ok {
+    border-color: rgba(62, 130, 79, 0.9);
+}
+
+.q-toast.bad {
+    border-color: rgba(166, 58, 49, 0.9);
+}

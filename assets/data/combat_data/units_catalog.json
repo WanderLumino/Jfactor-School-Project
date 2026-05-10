@@ -1,0 +1,290 @@
+﻿{
+    "defaults": {
+        "player": {
+            "nome": "Leone",
+            "specie": "leone",
+            "imgPath": "assets/img/bestie/leone_idle_frames/frame_000.png",
+            "maxHP": 150,
+            "hp": 150,
+            "attacco": 16,
+            "speciale": "Ruggito Terrificante",
+            "attaccoSpeciale": 21,
+            "descrizione": "Compagno affidabile nelle battaglie infernali."
+        },
+        "enemy": {
+            "nome": "Dannato Errante",
+            "specie": "dannato",
+            "imgPath": "assets/img/dannati/dannato_girone1_idle_frames/frame_000.png",
+            "maxHP": 118,
+            "hp": 118,
+            "attacco": 14,
+            "speciale": "Maledizione Oscura",
+            "attaccoSpeciale": 19,
+            "descrizione": "Anima perduta che difende questo cerchio."
+        }
+    },
+    "starters": {
+        "leone": {
+            "nome": "Leone",
+            "specie": "leone",
+            "imgPath": "assets/img/bestie/leone_idle_frames/frame_000.png",
+            "maxHP": 150,
+            "hp": 150,
+            "attacco": 17,
+            "speciale": "Ruggito Terrificante",
+            "attaccoSpeciale": 22,
+            "descrizione": "Un leone feroce che blocca il cammino. Simbolo della violenza.",
+            "i18n": {
+                "en": {
+                    "nome": "Lion",
+                    "descrizione": "A fierce lion that blocks the path. Symbol of violence.",
+                    "speciale": "Terrifying Roar"
+                }
+            }
+        },
+        "lonza": {
+            "nome": "Lonza",
+            "specie": "lonza",
+            "imgPath": "assets/img/bestie/lonza_idle_frames/frame_000.png",
+            "maxHP": 135,
+            "hp": 135,
+            "attacco": 17,
+            "speciale": "Salto Agile",
+            "attaccoSpeciale": 24,
+            "descrizione": "Una lonza veloce e ingannevole. Simbolo della lussuria.",
+            "i18n": {
+                "en": {
+                    "nome": "Leopard",
+                    "descrizione": "A swift and deceptive leopard. Symbol of lust.",
+                    "speciale": "Agile Leap"
+                }
+            }
+        },
+        "lupa": {
+            "nome": "Lupa",
+            "specie": "lupa",
+            "imgPath": "assets/img/bestie/lupa_idle_frames/frame_000.png",
+            "maxHP": 145,
+            "hp": 145,
+            "attacco": 18,
+            "speciale": "Morso Avvelenato",
+            "attaccoSpeciale": 25,
+            "descrizione": "Una lupa famelica che tutto divora. Simbolo dell\u0027avarizia.",
+            "i18n": {
+                "en": {
+                    "nome": "Wolf",
+                    "descrizione": "A ravenous she-wolf that devours everything. Symbol of greed.",
+                    "speciale": "Poisoned Bite"
+                }
+            }
+        }
+    },
+    "species": {
+        "limbo": {
+            "nome": "Achille",
+            "specie": "limbo",
+            "maxHP": 118,
+            "attacco": 14,
+            "attaccoSpeciale": 18,
+            "speciale": "Eco del Vuoto",
+            "i18n": {
+                "en": {
+                    "descrizione": "A noble soul of Limbo, unbaptized yet full of virtue.",
+                    "nome": "Achilles"
+                }
+            },
+            "descrizione": "Anima nobile del Limbo, priva del battesimo ma ricca di virtù."
+        },
+        "lussurioso": {
+            "nome": "Paolo e Francesca",
+            "specie": "lussurioso",
+            "maxHP": 122,
+            "attacco": 15,
+            "attaccoSpeciale": 20,
+            "speciale": "Vento Seducente",
+            "i18n": {
+                "en": {
+                    "descrizione": "Lovers swept forever by the storm of passion.",
+                    "nome": "Paolo and Francesca"
+                }
+            },
+            "descrizione": "Amanti travolti dalla bufera eterna della passione."
+        },
+        "goloso": {
+            "nome": "Ciacco",
+            "specie": "goloso",
+            "maxHP": 128,
+            "attacco": 15,
+            "attaccoSpeciale": 20,
+            "speciale": "Morsa Infinita",
+            "i18n": {
+                "en": {
+                    "descrizione": "Damned soul of the third circle, sunk in mud and freezing rain.",
+                    "nome": "Ciacco"
+                }
+            },
+            "descrizione": "Dannato del terzo cerchio, immerso nel fango e nella pioggia gelida."
+        },
+        "avaro": {
+            "nome": "Ecclesiastici anonimi",
+            "specie": "avaro",
+            "maxHP": 140,
+            "attacco": 17,
+            "attaccoSpeciale": 19,
+            "speciale": "Peso del Possesso",
+            "i18n": {
+                "en": {
+                    "descrizione": "Hoarders of boundless wealth, condemned to endless burden.",
+                    "nome": "Anonymous Clerics"
+                }
+            },
+            "descrizione": "Custodi di ricchezze senza misura, condannati al peso eterno."
+        },
+        "prodigo": {
+            "nome": "Gli Sperperatori Eterni",
+            "specie": "prodigo",
+            "maxHP": 136,
+            "attacco": 17,
+            "attaccoSpeciale": 20,
+            "speciale": "Spreco Selvaggio",
+            "i18n": {
+                "en": {
+                    "descrizione": "Souls who wasted everything, doomed to endless toil.",
+                    "nome": "The Eternal Wasters"
+                }
+            },
+            "descrizione": "Anime che dissiparono tutto, spinte in una fatica senza fine."
+        },
+        "iracondo": {
+            "nome": "Filippo Argenti",
+            "specie": "iracondo",
+            "maxHP": 132,
+            "attacco": 18,
+            "attaccoSpeciale": 21,
+            "speciale": "Furia dello Stige",
+            "i18n": {
+                "en": {
+                    "descrizione": "A wrathful soul of Styx, consumed by unending rage.",
+                    "nome": "Filippo Argenti"
+                }
+            },
+            "descrizione": "Furioso dello Stige, consumato da rabbia inestinguibile."
+        },
+        "accidioso": {
+            "nome": "I Sommersi dello Stige",
+            "specie": "accidioso",
+            "maxHP": 134,
+            "attacco": 19,
+            "attaccoSpeciale": 20,
+            "speciale": "Melma Soffocante",
+            "i18n": {
+                "en": {
+                    "descrizione": "Muted and passive souls submerged in the sludge of sloth.",
+                    "nome": "The Submerged of Styx"
+                }
+            },
+            "descrizione": "Anime spente e senza voce, sommerse nel fango dell'accidia."
+        },
+        "eretico": {
+            "nome": "Farinata degli Uberti",
+            "specie": "eretico",
+            "maxHP": 136,
+            "attacco": 24,
+            "attaccoSpeciale": 21,
+            "speciale": "Fiamma Empia",
+            "i18n": {
+                "en": {
+                    "descrizione": "A proud heretic, confined within burning tombs.",
+                    "nome": "Farinata degli Uberti"
+                }
+            },
+            "descrizione": "Eretico fiero, rinchiuso tra tombe infuocate."
+        },
+        "violenza_altri": {
+            "nome": "Attila",
+            "specie": "violenza_altri",
+            "maxHP": 146,
+            "attacco": 20,
+            "attaccoSpeciale": 22,
+            "speciale": "Colpo Bestiale",
+            "i18n": {
+                "en": {
+                    "descrizione": "Violent against others, submerged in boiling blood.",
+                    "nome": "Attila"
+                }
+            },
+            "descrizione": "Violento contro il prossimo, immerso nel sangue bollente."
+        },
+        "violenza_se": {
+            "nome": "Pier della Vigna",
+            "specie": "violenza_se",
+            "maxHP": 142,
+            "attacco": 21,
+            "attaccoSpeciale": 21,
+            "speciale": "Spine Dannate",
+            "i18n": {
+                "en": {
+                    "descrizione": "Turned into a tree, he can speak only through pain.",
+                    "nome": "Pier della Vigna"
+                }
+            },
+            "descrizione": "Trasformato in albero, parla solo attraverso il dolore."
+        },
+        "violenza_dio": {
+            "nome": "Brunetto Latini",
+            "specie": "violenza_dio",
+            "maxHP": 144,
+            "attacco": 21,
+            "attaccoSpeciale": 23,
+            "speciale": "Pioggia di Fuoco",
+            "i18n": {
+                "en": {
+                    "descrizione": "Damned beneath fiery rain in a sterile desert.",
+                    "nome": "Brunetto Latini"
+                }
+            },
+            "descrizione": "Dannato sotto la pioggia di fuoco nel deserto sterile."
+        },
+        "fraudolento": {
+            "nome": "I Millevolti",
+            "specie": "fraudolento",
+            "maxHP": 134,
+            "attacco": 22,
+            "attaccoSpeciale": 23,
+            "speciale": "Inganno Mortale",
+            "i18n": {
+                "en": {
+                    "descrizione": "Master of deception, the shifting face of fraud.",
+                    "nome": "The Thousand-Faced"
+                }
+            },
+            "descrizione": "Maestro dell inganno, volto mutevole della frode."
+        },
+        "traditore": {
+            "nome": "Lucifero",
+            "specie": "traditore",
+            "maxHP": 220,
+            "attacco": 19,
+            "attaccoSpeciale": 26,
+            "speciale": "Gelo di Cocito",
+            "descrizione": "Signore del nono cerchio, simbolo del tradimento assoluto.",
+            "i18n": {
+                "en": {
+                    "descrizione": "Lord of the ninth circle, symbol of absolute betrayal.",
+                    "nome": "Lucifer"
+                }
+            }
+        }
+    },
+    "circleDefaultSpecies": {
+        "1": "limbo",
+        "2": "lussurioso",
+        "3": "goloso",
+        "4": "avaro",
+        "5": "iracondo",
+        "6": "eretico",
+        "7": "violenza_altri",
+        "8": "fraudolento",
+        "9": "traditore"
+    }
+}

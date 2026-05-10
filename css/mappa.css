@@ -1,0 +1,753 @@
+﻿/* Commento generale file: stili principali dell'interfaccia. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+:root {
+    --colore-fuoco: #ff4400;
+    --colore-brace: #8b2000;
+    --colore-oro: #ffaa44;
+    --colore-testo: #ffcc88;
+    --colore-sfondo: #0a0000;
+    --font-pixel: 'VCR OSD Mono', 'Courier New', monospace;
+}
+
+body {
+    background-color: var(--colore-sfondo);
+    height: 100vh;
+    overflow: hidden;
+    font-family: var(--font-pixel);
+    color: var(--colore-testo);
+}
+
+#schermo-principale {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    outline: 2px solid #000;
+    border: 2px solid var(--colore-brace);
+    box-shadow: 0 0 0 4px #000, 0 0 24px var(--colore-fuoco), inset 0 0 24px rgba(0, 0, 0, 0.5);
+}
+
+#canvas-mappa,
+#canvas-sprite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+#canvas-sprite {
+    pointer-events: none;
+}
+
+#hud {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#titolo-hud {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--colore-oro);
+    font-size: clamp(13px, 1.95vw, 20px);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 0 0 10px var(--colore-fuoco);
+    background: rgba(0, 0, 0, 0.82);
+    border: 2px solid var(--colore-brace);
+    border-radius: 8px;
+    padding: 8px 18px;
+}
+
+#messaggio-hud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffee00;
+    font-size: clamp(12px, 1.6vw, 16px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 2px 2px 0 #000, 0 0 10px #ff6600;
+    background: rgba(0, 0, 0, 0.82);
+    border: 2px solid var(--colore-brace);
+    padding: 12px 20px;
+    display: none;
+}
+
+#overlay-combattimento {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 34, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 20;
+    transition: opacity 0.1s steps(3, end);
+}
+
+#overlay-combattimento.attivo {
+    opacity: 1;
+}
+
+#minimappa {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: clamp(72px, 12vw, 110px);
+    height: clamp(72px, 12vw, 110px);
+    display: block;
+    outline: 1px solid #000;
+    border: 1px solid rgba(139, 32, 0, 0.6);
+    box-shadow: 0 0 8px rgba(255, 68, 0, 0.2);
+    opacity: 0.85;
+}
+
+#scanlines {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.08) 4px);
+}
+
+#encounter-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.encounter-box {
+    width: min(94vw, 650px);
+    border: 2px solid var(--colore-brace);
+    background: rgba(18, 5, 2, 0.97);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.encounter-box h2 {
+    margin: 0;
+    color: var(--colore-oro);
+    font-size: clamp(20px, 2.4vw, 30px);
+}
+
+.encounter-box p {
+    margin-top: 10px;
+    color: #ffd9a6;
+    font-size: clamp(12px, 1.2vw, 16px);
+}
+
+.encounter-actions {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(170px, 1fr));
+    gap: 12px;
+}
+
+.mode-btn {
+    border: 2px solid #5a1d0d;
+    background: #2a0f08;
+    color: #ffd8aa;
+    border-radius: 12px;
+    min-height: 96px;
+    padding: 12px;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: clamp(13px, 1.2vw, 17px);
+}
+
+.mode-btn img {
+    width: clamp(26px, 3vw, 42px);
+    height: clamp(26px, 3vw, 42px);
+    object-fit: contain;
+}
+
+.mode-btn:hover {
+    border-color: var(--colore-oro);
+}
+
+.non-visibile {
+    display: none !important;
+}
+
+@media (max-width: 760px) {
+    .encounter-actions {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+#coin-box {
+    margin-top: 14px;
+    border: 1px solid #7b2b12;
+    border-radius: 10px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+#coin-title {
+    margin: 0;
+    color: #ffd39e;
+    font-size: clamp(15px, 1.4vw, 20px);
+}
+
+#coin-image {
+    margin-top: 8px;
+    width: min(24vw, 130px);
+    height: min(24vw, 130px);
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+#coin-result {
+    margin-top: 8px;
+    color: #ffe7be;
+    font-size: clamp(12px, 1.1vw, 16px);
+}
+
+.hud-top-buttons {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 12;
+    display: flex;
+    gap: 10px;
+    pointer-events: auto;
+}
+
+.hud-backpack {
+    border: 2px solid #7d2a14;
+    background: rgba(20, 7, 3, 0.92);
+    color: #ffcf9c;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: var(--font-pixel);
+    font-size: clamp(12px, 1.1vw, 15px);
+    cursor: pointer;
+}
+
+.hud-codex {
+    min-width: 118px;
+}
+
+#backpack-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background:
+        radial-gradient(circle at 15% 18%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0) 42%),
+        radial-gradient(circle at 84% 84%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 38%),
+        rgba(0, 0, 0, 0.76);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.backpack-box {
+    position: relative;
+    width: min(98vw, 1360px);
+    max-height: 94vh;
+    overflow: auto;
+    border: 2px solid #8f7554;
+    border-radius: 14px;
+    background: rgba(214, 191, 158, 0.97);
+    color: #1f1710;
+    padding: 20px;
+}
+
+.backpack-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #9e4b2a;
+    border-radius: 8px;
+    background: #2a0f08;
+    color: #ffdeb2;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    z-index: 4;
+}
+
+.backpack-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.backpack-card {
+    border: 1px solid #8b6f4f;
+    border-radius: 10px;
+    background: rgba(247, 238, 223, 0.92);
+    padding: 10px;
+    cursor: pointer;
+    color: #23180f;
+}
+
+.backpack-card.is-lead {
+    outline: 2px solid #ffb347;
+}
+
+.backpack-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+}
+
+.backpack-card h4 {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #2b1e14;
+}
+
+.backpack-card p {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #3a2a1d;
+}
+
+.backpack-detail {
+    margin-top: 16px;
+    border: 1px solid #8b6f4f;
+    border-radius: 10px;
+    background: rgba(250, 243, 230, 0.93);
+    padding: 14px;
+    line-height: 1.55;
+    color: #1f1710;
+}
+
+/* Tema pergamena condiviso: modal zaino nella mappa. */
+.backpack-box {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 16% 14%, rgba(255, 247, 222, 0.60), rgba(255, 247, 222, 0) 36%),
+        radial-gradient(circle at 84% 86%, rgba(106, 67, 31, 0.24), rgba(106, 67, 31, 0) 44%),
+        repeating-linear-gradient(-10deg, rgba(74, 47, 22, 0.06) 0px, rgba(74, 47, 22, 0.06) 2px, rgba(230, 208, 172, 0) 2px, rgba(230, 208, 172, 0) 10px),
+        linear-gradient(160deg, #f1deb9 0%, #dcc08f 54%, #c79e66 100%);
+    border: 2px solid rgba(56, 31, 12, 0.92);
+    outline: 1px solid rgba(255, 232, 190, 0.62);
+    outline-offset: -8px;
+    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.45), inset 0 0 0 2px rgba(90, 57, 24, 0.30);
+}
+
+.backpack-box::before {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    border: 1.5px dashed rgba(72, 43, 20, 0.42);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.backpack-card,
+.backpack-detail,
+.backpack-card h4,
+.backpack-card p {
+    color: #2a190b;
+}
+
+/* Layout zaino migliorato: lista carte + pannello laterale dettagli. */
+.backpack-box {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 14px;
+    align-items: start;
+}
+
+#backpack-title,
+#backpack-subtitle,
+.backpack-close {
+    grid-column: 1 / -1;
+}
+
+.backpack-list {
+    max-height: 68vh;
+    overflow: auto;
+    align-content: start;
+}
+
+.backpack-detail {
+    margin-top: 0;
+    min-height: 280px;
+    max-height: 68vh;
+    overflow: auto;
+}
+
+.backpack-order {
+    font-size: 11px;
+    font-weight: 700;
+    color: #7f4b1d;
+}
+
+.drag-tip {
+    font-size: 11px;
+    color: #6f5338;
+}
+
+.backpack-card.is-dragging {
+    opacity: 0.45;
+}
+
+.backpack-card.is-drop-target {
+    outline: 2px dashed #c0783c;
+}
+
+.backpack-items {
+    border: 1px solid #8b6f4f;
+    border-radius: 10px;
+    background: rgba(250, 243, 230, 0.93);
+    padding: 14px;
+    color: #1f1710;
+}
+
+.backpack-items h3 {
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.backpack-coins {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.backpack-coins img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.backpack-items-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(54px, 1fr));
+    gap: 8px;
+}
+
+.inv-slot {
+    border: 1px solid #7a5f44;
+    border-radius: 8px;
+    background: rgba(255, 247, 233, 0.92);
+    min-height: 66px;
+    display: grid;
+    place-items: center;
+    padding: 4px;
+    font-size: 11px;
+}
+
+.inv-slot img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.inv-slot.is-empty {
+    opacity: 0.55;
+}
+
+@media (max-width: 980px) {
+    .backpack-box {
+        grid-template-columns: 1fr;
+    }
+
+    .backpack-list,
+    .backpack-detail {
+        max-height: none;
+    }
+}
+
+
+/* Disposizione inventario zaino: lista a sinistra, info e oggetti a destra. */
+.backpack-list {
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+
+.backpack-items {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+}
+
+.backpack-detail {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/* Rifinitura layout inventario mappa + guida iniziale. */
+.backpack-box {
+    grid-template-columns: minmax(0, 1.55fr) minmax(320px, 1fr);
+    grid-template-rows: auto auto 1fr;
+    gap: 14px;
+}
+
+#backpack-title,
+#backpack-subtitle,
+#backpack-guide,
+.backpack-close {
+    grid-column: 1 / -1;
+}
+
+#backpack-guide {
+    margin-top: 4px;
+}
+
+.backpack-guide-bubble {
+    position: relative;
+    max-width: 760px;
+    padding: 11px 14px;
+    border: 2px solid #6b3f1b;
+    border-radius: 12px;
+    background: rgba(255, 245, 225, 0.96);
+    color: #3a2411;
+    font-size: 13px;
+    line-height: 1.45;
+    box-shadow: 0 6px 14px rgba(50, 24, 8, 0.22);
+}
+
+.backpack-guide-bubble::after {
+    content: '';
+    position: absolute;
+    left: 34px;
+    bottom: -12px;
+    width: 18px;
+    height: 18px;
+    border-right: 2px solid #6b3f1b;
+    border-bottom: 2px solid #6b3f1b;
+    background: rgba(255, 245, 225, 0.96);
+    transform: rotate(45deg);
+}
+
+.backpack-list {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 66vh;
+    overflow: auto;
+    padding-right: 4px;
+}
+
+.backpack-card {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    gap: 12px;
+    min-height: 128px;
+    padding: 10px;
+}
+
+.backpack-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.backpack-card h4 {
+    margin-top: 0;
+}
+
+.backpack-items {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.backpack-detail {
+    grid-column: 2;
+    grid-row: 3;
+    margin-top: 0;
+    max-height: 66vh;
+    overflow: auto;
+}
+
+@media (max-width: 980px) {
+    .backpack-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .backpack-list,
+    .backpack-items,
+    .backpack-detail {
+        grid-column: 1;
+        grid-row: auto;
+        max-height: none;
+    }
+
+    .backpack-card {
+        grid-template-columns: 90px 1fr;
+    }
+
+    .backpack-card img {
+        width: 84px;
+        height: 84px;
+    }
+}
+
+/* Override layout zaino v2: guida sopra carte, dettagli同一行, 物品在底部整行. */
+.backpack-box {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    grid-template-rows: auto auto auto 1fr auto;
+    gap: 12px;
+}
+
+#backpack-title,
+#backpack-subtitle,
+.backpack-close {
+    grid-column: 1 / -1;
+}
+
+#backpack-guide {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0;
+    max-width: 92%;
+}
+
+.backpack-list {
+    grid-column: 1;
+    grid-row: 4;
+    max-height: 58vh;
+}
+
+.backpack-detail {
+    grid-column: 2;
+    grid-row: 4;
+    max-height: 58vh;
+}
+
+.backpack-items {
+    grid-column: 1 / -1;
+    grid-row: 5;
+}
+
+.backpack-card {
+    grid-template-columns: 88px 1fr;
+    min-height: 108px;
+    gap: 10px;
+}
+
+.backpack-card img {
+    width: 80px;
+    height: 80px;
+}
+
+.backpack-card h4 {
+    font-size: 13px;
+}
+
+.backpack-card p {
+    font-size: 11px;
+}
+
+@media (max-width: 980px) {
+    #backpack-guide,
+    .backpack-list,
+    .backpack-detail,
+    .backpack-items {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .backpack-card {
+        grid-template-columns: 76px 1fr;
+    }
+
+    .backpack-card img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Evita ritorni a capo nei nomi molto lunghi delle carte squadra. */
+.backpack-card h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* Rifinitura carte zaino: niente a capo e layout piu compatto. */
+.backpack-card {
+    grid-template-columns: 74px minmax(0, 1fr) !important;
+    min-height: 98px !important;
+    align-items: start !important;
+}
+
+.backpack-card img {
+    width: 68px !important;
+    height: 68px !important;
+}
+
+.backpack-card p {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100%;
+}
+
+/* Allineamento verticale in alto per lista carte e pannello dettagli. */
+.backpack-list {
+    align-content: start !important;
+    align-items: start !important;
+}
+
+.backpack-detail {
+    align-self: start !important;
+}
+
+/* Stile dettaglio dannato: ispirato al bestiario. */
+.bp-detail-row {
+    margin: 0 0 6px;
+    line-height: 1.4;
+    color: #2a190b;
+    font-size: 13px;
+}
+
+.bp-detail-label {
+    font-weight: 700;
+    color: #4a2c11;
+    margin-right: 4px;
+}
+
+.bp-detail-desc {
+    margin-top: 8px;
+    line-height: 1.55;
+    font-style: italic;
+    color: #3d2613;
+}
+
