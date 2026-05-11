@@ -80,11 +80,11 @@ docs/                 documentazione, presentazione, debug tools
 
 ## Team
 
-- **Ferlino Nicolas**
-- **Guaita Cristian** — Capogruppo
-- **Huang Yandi** — Progettista di sprite
-- **Quagliotti Marco**
-- **Salzillo Giovanni**
+- **Ferlino Nicolas** - progettista delle mappe
+- **Guaita Christian** — Capogruppo
+- **Huang Yandi** — Progettista di sprite / UI designer / developer
+- **Quagliotti Marco** - progettista delle mappe
+- **Salzillo Giovanni** - narrative designer
 
 Scuola: **IIS A. Volta — Lodi**
 
