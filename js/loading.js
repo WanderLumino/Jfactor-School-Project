@@ -347,6 +347,11 @@ window.addEventListener('load', async () => {
     startDotAnimation();
     await initLoadingContent();
 
+    if (skipBtn) {
+        skipBtn.classList.remove('nascosto');
+        skipShown = true;
+    }
+
     if (CORE?.preload?.images) {
         CORE.preload.images([
             'assets/img/mappe/selva_oscura.png',
