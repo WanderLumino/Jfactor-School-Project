@@ -3,7 +3,6 @@
 
 // Dati statici dei cerchi: i testi vengono letti dai file lingua.
 const CERCHI = [
-    { num: 3, romanum: 'III', mapKey: 'mappa1', preview: 'assets/img/mappe/lava_inferno_base.png' },
     { num: 0, romanum: '0', mapKey: 'mappa1', preview: 'assets/img/mappe/mappe_gioco/mappa_1.png' },
     { num: 1, romanum: 'I', mapKey: 'mappa1', preview: 'assets/img/mappe/mappe_gioco/mappa_1.png' },
     { num: 2, romanum: 'II', mapKey: 'mappa1', preview: 'assets/img/mappe/mappe_gioco/mappa_2.png' },
